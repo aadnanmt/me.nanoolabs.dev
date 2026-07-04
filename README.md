@@ -1,6 +1,6 @@
-# Root Node - My Personal Website
+# Root Node - My Digital Garden
 
-This is my personal website. I build it with **Astro 5** and **Tailwind CSS**. It is my "Digital Garden" where I write about my life, my learning journey, and Linux.
+My digital garden. I build it with **Astro 5** and **Tailwind CSS**. I write about my life, my learning journey, and Linux.
 
 ## Live
 
