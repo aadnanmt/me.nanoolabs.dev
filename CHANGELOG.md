@@ -1,6 +1,7 @@
 # Garden Changelog
 
 All notable changes to this my digital garden and content will be documented here
+
 ## [1.4.13] - 2026-07-04
 
 ### Bug Fixes
@@ -17,15 +18,15 @@ All notable changes to this my digital garden and content will be documented her
 ### Features & New Content
 
 - Add changelog page ([0c72813](https://github.com/aadnanmt/root.nanoolabs.dev/commit/0c728137ae05514a5e49858edfe193feca12c09f))
-- *(icon)* Add changelog icon ([43423a1](https://github.com/aadnanmt/root.nanoolabs.dev/commit/43423a19f9156e82534323fe2a3a5ead218ea618))
+- _(icon)_ Add changelog icon ([43423a1](https://github.com/aadnanmt/root.nanoolabs.dev/commit/43423a19f9156e82534323fe2a3a5ead218ea618))
 - Sync explore for link changelog ([fdfe4b4](https://github.com/aadnanmt/root.nanoolabs.dev/commit/fdfe4b41a26f87ca5c01beac95bfab3e3d9b79e4))
 - Add components BackToPrev on contact page ([c7a976e](https://github.com/aadnanmt/root.nanoolabs.dev/commit/c7a976ec5ec852346f843920126ecb9ab3a9fa09))
-- *(garden)* Add description my work ([24d4713](https://github.com/aadnanmt/root.nanoolabs.dev/commit/24d47138e4e455b1b49da61d31e28de0466c7a77))
+- _(garden)_ Add description my work ([24d4713](https://github.com/aadnanmt/root.nanoolabs.dev/commit/24d47138e4e455b1b49da61d31e28de0466c7a77))
 - Add changelog link to footer and bump v1.4.11 ([e7e14bf](https://github.com/aadnanmt/root.nanoolabs.dev/commit/e7e14bf13981b24e43fa74d4d2bca22dbc9e7335))
 
 ### Garden Growth
 
-- *(uses)* Update system config ([0bfe0f3](https://github.com/aadnanmt/root.nanoolabs.dev/commit/0bfe0f390cbd55d900e0fe8e2179cc85f569448f))
+- _(uses)_ Update system config ([0bfe0f3](https://github.com/aadnanmt/root.nanoolabs.dev/commit/0bfe0f390cbd55d900e0fe8e2179cc85f569448f))
 - Generate changelog for v1.4.11 ([6c6b317](https://github.com/aadnanmt/root.nanoolabs.dev/commit/6c6b3177d31c24b6bd6b6142bfdf5e5c5067036a))
 
 ### Maintenance
@@ -34,7 +35,7 @@ All notable changes to this my digital garden and content will be documented her
 
 ### Refactoring
 
-- *(link)* Change to url path changelog ([5211273](https://github.com/aadnanmt/root.nanoolabs.dev/commit/52112734514abba4a316051f793961951e385c44))
+- _(link)_ Change to url path changelog ([5211273](https://github.com/aadnanmt/root.nanoolabs.dev/commit/52112734514abba4a316051f793961951e385c44))
 
 ## [1.4.10] - 2026-06-30
 
@@ -53,7 +54,7 @@ All notable changes to this my digital garden and content will be documented her
 - Resolve build errors and make cloudflare adapter dynamic ([823e026](https://github.com/aadnanmt/root.nanoolabs.dev/commit/823e026ce43d668cd2292544a8ba467b97351d5b))
 - Add back cloudflare adapter for production ([877af79](https://github.com/aadnanmt/root.nanoolabs.dev/commit/877af797660ec95bfa71947139f31031cca9c223))
 - Fix type error in ArrowCard and remove unused code ([a8b3017](https://github.com/aadnanmt/root.nanoolabs.dev/commit/a8b30173cee87ee29d660bea5a69893759888201))
-- *(import)* Forgot to import component BackToPrev, human error ([a7db349](https://github.com/aadnanmt/root.nanoolabs.dev/commit/a7db3496b603fc8c4b532d851931d231dc4dfea5))
+- _(import)_ Forgot to import component BackToPrev, human error ([a7db349](https://github.com/aadnanmt/root.nanoolabs.dev/commit/a7db3496b603fc8c4b532d851931d231dc4dfea5))
 - Eliminate FOUC with inline theme script ([0bf92c6](https://github.com/aadnanmt/root.nanoolabs.dev/commit/0bf92c67475a07d345e8d37a8286301fbfa76517))
 
 ### Features & New Content
@@ -64,18 +65,18 @@ All notable changes to this my digital garden and content will be documented her
 - Implement contact page, expand social, and sync explore (v1.4.5) ([235565b](https://github.com/aadnanmt/root.nanoolabs.dev/commit/235565b5165388f232aa1f36f7a844ce8601821b))
 - Adaptive favicon and bump version to 1.4.4 ([a623576](https://github.com/aadnanmt/root.nanoolabs.dev/commit/a623576fc3005deaa10432e14f0d01136e9bd73f))
 - Implement global image styling and include all public assets (v1.4.0) ([7ad6c50](https://github.com/aadnanmt/root.nanoolabs.dev/commit/7ad6c5053577dce0721e4b321bb7994b21a186da))
-- *(ux)* Add 'Edit on GitHub' links to all content pages and bump to 1.3.2 ([7f556af](https://github.com/aadnanmt/root.nanoolabs.dev/commit/7f556af7fb3b720c9ac0bc32941fdacec3a324e8))
-- *(rss)* Upgrade to full content feed and bump version to 1.3.1 ([75e728c](https://github.com/aadnanmt/root.nanoolabs.dev/commit/75e728c6895986c912dac89327f68139ee023d57))
-- *(rss)* Include milestones in RSS feed ([64191db](https://github.com/aadnanmt/root.nanoolabs.dev/commit/64191dbc47ae61f0ac68dec027bd386f7e88a684))
-- *(components)* Add YearProgress and ASCII-style ProgressBar component ([2be8df0](https://github.com/aadnanmt/root.nanoolabs.dev/commit/2be8df0f38505da0842199087a2c04fd84ec1a03))
-- *(ui)* Display 'Last Updated' timestamp on content pages using gitDate ([3c61da3](https://github.com/aadnanmt/root.nanoolabs.dev/commit/3c61da34df2ed4ac43319eddf3629c0e58c85b03))
-- *(lib)* Add gitDate helper for file modification timestamp ([cf092de](https://github.com/aadnanmt/root.nanoolabs.dev/commit/cf092decd428083dac07062e0ab9c691e7196fa1))
-- *(content)* Update milestones with laboratory and federation roadmap ([21e82be](https://github.com/aadnanmt/root.nanoolabs.dev/commit/21e82be01f77c6e920b80b696fc06b8497529a71))
+- _(ux)_ Add 'Edit on GitHub' links to all content pages and bump to 1.3.2 ([7f556af](https://github.com/aadnanmt/root.nanoolabs.dev/commit/7f556af7fb3b720c9ac0bc32941fdacec3a324e8))
+- _(rss)_ Upgrade to full content feed and bump version to 1.3.1 ([75e728c](https://github.com/aadnanmt/root.nanoolabs.dev/commit/75e728c6895986c912dac89327f68139ee023d57))
+- _(rss)_ Include milestones in RSS feed ([64191db](https://github.com/aadnanmt/root.nanoolabs.dev/commit/64191dbc47ae61f0ac68dec027bd386f7e88a684))
+- _(components)_ Add YearProgress and ASCII-style ProgressBar component ([2be8df0](https://github.com/aadnanmt/root.nanoolabs.dev/commit/2be8df0f38505da0842199087a2c04fd84ec1a03))
+- _(ui)_ Display 'Last Updated' timestamp on content pages using gitDate ([3c61da3](https://github.com/aadnanmt/root.nanoolabs.dev/commit/3c61da34df2ed4ac43319eddf3629c0e58c85b03))
+- _(lib)_ Add gitDate helper for file modification timestamp ([cf092de](https://github.com/aadnanmt/root.nanoolabs.dev/commit/cf092decd428083dac07062e0ab9c691e7196fa1))
+- _(content)_ Update milestones with laboratory and federation roadmap ([21e82be](https://github.com/aadnanmt/root.nanoolabs.dev/commit/21e82be01f77c6e920b80b696fc06b8497529a71))
 - Implement registry node navigation widget and nanoo asci on footer ([cd1cab1](https://github.com/aadnanmt/root.nanoolabs.dev/commit/cd1cab1619a836018fcc475e07abae0a5a9f90b8))
 - Add /uses page for software and daily driver setup ([98e6439](https://github.com/aadnanmt/root.nanoolabs.dev/commit/98e64393935a41c4abf1188ed3a36ad1f48283a9))
 - Release v1.2.0-dev with caching and homepage integration ([bdecbb1](https://github.com/aadnanmt/root.nanoolabs.dev/commit/bdecbb184b955e07c04476e250bc7f0506c1b4be))
 - Complete Last.fm integration and project rebranding to v1.1.0-dev ([9507a21](https://github.com/aadnanmt/root.nanoolabs.dev/commit/9507a21c54d42d9e8445395987ffb16202bef006))
-- *(types)* Add Last.fm type definitions ([41326e2](https://github.com/aadnanmt/root.nanoolabs.dev/commit/41326e27a428f1f7573ea780f7cbd694261f30fe))
+- _(types)_ Add Last.fm type definitions ([41326e2](https://github.com/aadnanmt/root.nanoolabs.dev/commit/41326e27a428f1f7573ea780f7cbd694261f30fe))
 - Unify UI consistency and fix types in stats/focus pages ([e2ce2f2](https://github.com/aadnanmt/root.nanoolabs.dev/commit/e2ce2f20f4f33b934170f0ec49a2d6879be69865))
 - Udpate UI consistency on now page and fix stats types ([0918898](https://github.com/aadnanmt/root.nanoolabs.dev/commit/09188985a6772afb9948f8f57db6cddca7f4e942))
 - Refactor page layouts and add stats page ([6f01014](https://github.com/aadnanmt/root.nanoolabs.dev/commit/6f010144fa45ad8e1cdb6cd450c56f6ab3fa1512))
@@ -109,9 +110,9 @@ All notable changes to this my digital garden and content will be documented her
 - Add contributors page ([82cb7ad](https://github.com/aadnanmt/root.nanoolabs.dev/commit/82cb7adfc75a607b151493f2abfb1b75fff33b3e))
 - Add contributor metadata to constants ([9752cfe](https://github.com/aadnanmt/root.nanoolabs.dev/commit/9752cfe56f2b3f59d5f718a9db092dd59b0c7bc7))
 - Add link in footer to credits page ([1114ab8](https://github.com/aadnanmt/root.nanoolabs.dev/commit/1114ab8814f4e29c93bf1640a47e3063937df468))
-- Page credits for as a way to say  thanks ([deb27b6](https://github.com/aadnanmt/root.nanoolabs.dev/commit/deb27b6df845e9677e23c77119913e3a3578e553))
+- Page credits for as a way to say thanks ([deb27b6](https://github.com/aadnanmt/root.nanoolabs.dev/commit/deb27b6df845e9677e23c77119913e3a3578e553))
 - Feat: implement geist sans primary font and remove
-Lora ([5bef54f](https://github.com/aadnanmt/root.nanoolabs.dev/commit/5bef54f4b67a44ffb50cb8ff393fc404763f8682))
+  Lora ([5bef54f](https://github.com/aadnanmt/root.nanoolabs.dev/commit/5bef54f4b67a44ffb50cb8ff393fc404763f8682))
 
 ### Garden Growth
 
@@ -126,10 +127,10 @@ Lora ([5bef54f](https://github.com/aadnanmt/root.nanoolabs.dev/commit/5bef54f4b6
 
 - Add git-cliff config for minimal changelog ([aaabc46](https://github.com/aadnanmt/root.nanoolabs.dev/commit/aaabc4675d9d4beae48109c4e7fcd605d722f792))
 - Bypass cloudflare submodule check ([8cc1af3](https://github.com/aadnanmt/root.nanoolabs.dev/commit/8cc1af3582abde660707392bd6dd257d30112c7f))
-- *(cleaned)* Redundant code, assets has not been used for a long time ([2a74ab8](https://github.com/aadnanmt/root.nanoolabs.dev/commit/2a74ab8b25f3ce914e0b500ed916c3938269c27b))
-- *(setup)* Hono for handle autentication private pages and update recursive git submmodule [skip ci] ([d76d77f](https://github.com/aadnanmt/root.nanoolabs.dev/commit/d76d77fe451fdbad20ad6e2ade3c9cd2c00431d1))
-- *(garden)* Register secure diary submodule under content collections ([084d7f3](https://github.com/aadnanmt/root.nanoolabs.dev/commit/084d7f38abf832b2f73b905c20a06797e7e6f165))
-- *(config)* Setup .env template and whitelist in gitignore ([eaa2c5b](https://github.com/aadnanmt/root.nanoolabs.dev/commit/eaa2c5bc51d99fed6c366dff908e6668462c26be))
+- _(cleaned)_ Redundant code, assets has not been used for a long time ([2a74ab8](https://github.com/aadnanmt/root.nanoolabs.dev/commit/2a74ab8b25f3ce914e0b500ed916c3938269c27b))
+- _(setup)_ Hono for handle autentication private pages and update recursive git submmodule [skip ci] ([d76d77f](https://github.com/aadnanmt/root.nanoolabs.dev/commit/d76d77fe451fdbad20ad6e2ade3c9cd2c00431d1))
+- _(garden)_ Register secure diary submodule under content collections ([084d7f3](https://github.com/aadnanmt/root.nanoolabs.dev/commit/084d7f38abf832b2f73b905c20a06797e7e6f165))
+- _(config)_ Setup .env template and whitelist in gitignore ([eaa2c5b](https://github.com/aadnanmt/root.nanoolabs.dev/commit/eaa2c5bc51d99fed6c366dff908e6668462c26be))
 - Update dependencies, configure built dependencies whitelist and bump version 1.4.8 ([4e2d6c4](https://github.com/aadnanmt/root.nanoolabs.dev/commit/4e2d6c47236fac272176de5b50883d6c8c8b0f5b))
 - Release v1.4.7 - add garden metrics and update social config ([5df55ba](https://github.com/aadnanmt/root.nanoolabs.dev/commit/5df55ba0af0c1174bbd90f81d148e5d85dee6214))
 - Update cloudflare edge config and bump version to 1.4.3 ([cd93822](https://github.com/aadnanmt/root.nanoolabs.dev/commit/cd938228533fa4b80a446fecfb0da9f8fcfd7b97))
@@ -146,13 +147,13 @@ Lora ([5bef54f](https://github.com/aadnanmt/root.nanoolabs.dev/commit/5bef54f4b6
 - Sync lockfile for cloudflare migration ([bd9c3c9](https://github.com/aadnanmt/root.nanoolabs.dev/commit/bd9c3c94c124b0d2541d5533a1b9b811931cf13c))
 - Cleanup tsconfig.json by removing baseUrl and unused exclude ([753b29c](https://github.com/aadnanmt/root.nanoolabs.dev/commit/753b29c104f62b410c70f7e3d84a134900a5d27d))
 - Update contact email in SITE constants ([fec64be](https://github.com/aadnanmt/root.nanoolabs.dev/commit/fec64bed32e03cda1ea5b405eb902611b2e02f4b))
-- *(assets)* Cleanup assets not used ([56bb977](https://github.com/aadnanmt/root.nanoolabs.dev/commit/56bb97727df298f09dc42a9d30f1898c2650ec55))
+- _(assets)_ Cleanup assets not used ([56bb977](https://github.com/aadnanmt/root.nanoolabs.dev/commit/56bb97727df298f09dc42a9d30f1898c2650ec55))
 - Remove wrangler configuration ([189a2e0](https://github.com/aadnanmt/root.nanoolabs.dev/commit/189a2e0507ffc4842b157215ebd493302fa39f9b))
 - Update wrangler.toml config ([2c0fd63](https://github.com/aadnanmt/root.nanoolabs.dev/commit/2c0fd63d85121bec516876baf56f068b9aa219df))
-- *(href)* Change new github org ([bfb076a](https://github.com/aadnanmt/root.nanoolabs.dev/commit/bfb076a8e628ac3e5b65f0b8764f132b9ddf3f78))
-- *(href)* Email nanoolabs and update social ([44838c9](https://github.com/aadnanmt/root.nanoolabs.dev/commit/44838c996a2459ed94acb62334cabd8963e5f905))
-- *(deps)* Prettier-plugin-tailwindcss and astro check ([07404f6](https://github.com/aadnanmt/root.nanoolabs.dev/commit/07404f602eca9d64b80889e2e2533c843512011d))
-- *(astro)* New domain nanoolabs ([bdbe48c](https://github.com/aadnanmt/root.nanoolabs.dev/commit/bdbe48c77aa3e2d096df478c562f5dec30b4ff23))
+- _(href)_ Change new github org ([bfb076a](https://github.com/aadnanmt/root.nanoolabs.dev/commit/bfb076a8e628ac3e5b65f0b8764f132b9ddf3f78))
+- _(href)_ Email nanoolabs and update social ([44838c9](https://github.com/aadnanmt/root.nanoolabs.dev/commit/44838c996a2459ed94acb62334cabd8963e5f905))
+- _(deps)_ Prettier-plugin-tailwindcss and astro check ([07404f6](https://github.com/aadnanmt/root.nanoolabs.dev/commit/07404f602eca9d64b80889e2e2533c843512011d))
+- _(astro)_ New domain nanoolabs ([bdbe48c](https://github.com/aadnanmt/root.nanoolabs.dev/commit/bdbe48c77aa3e2d096df478c562f5dec30b4ff23))
 - Integrate theme toggle into main layout ([73fa39b](https://github.com/aadnanmt/root.nanoolabs.dev/commit/73fa39b1accd02f6ccb95e9806c67add34ffd883))
 - Add wrangler configuration for cloudflare pages ([29edf81](https://github.com/aadnanmt/root.nanoolabs.dev/commit/29edf817255587df4c0b1bf931aa5f1386e5b4e3))
 - Root domain nanoo labs ([94d9ef9](https://github.com/aadnanmt/root.nanoolabs.dev/commit/94d9ef99d979acc5e035148f9c22b1705dd77eb2))
@@ -169,8 +170,8 @@ Lora ([5bef54f](https://github.com/aadnanmt/root.nanoolabs.dev/commit/5bef54f4b6
 
 ### Other Changes
 
-- *(uses)* Add KeePassDX Passkey to manage passkey / password local software list ([4ba1371](https://github.com/aadnanmt/root.nanoolabs.dev/commit/4ba13718d35e4bfe4e10f897b1bb27ef55ee08c2))
-- *(uses)* Add Aegis to 2FA software list ([5953757](https://github.com/aadnanmt/root.nanoolabs.dev/commit/595375772a59031354ddb091da1543ef0caf4984))
+- _(uses)_ Add KeePassDX Passkey to manage passkey / password local software list ([4ba1371](https://github.com/aadnanmt/root.nanoolabs.dev/commit/4ba13718d35e4bfe4e10f897b1bb27ef55ee08c2))
+- _(uses)_ Add Aegis to 2FA software list ([5953757](https://github.com/aadnanmt/root.nanoolabs.dev/commit/595375772a59031354ddb091da1543ef0caf4984))
 - Archive missing Nanoo Labs milestones and update first-step ([b6af0d1](https://github.com/aadnanmt/root.nanoolabs.dev/commit/b6af0d1412971c90321c2a20423aa0c1507b7e5b))
 - Implementation track ago logic for last.fm track and release stable ([52625c8](https://github.com/aadnanmt/root.nanoolabs.dev/commit/52625c8be44ef0a232fcac2ce5443bfb1431910a))
 - Merge branch 'main' into feature/lastfm-api ([9cba8b7](https://github.com/aadnanmt/root.nanoolabs.dev/commit/9cba8b774a44058498ec12fbc0d9ccd622af90f8))
@@ -179,6 +180,7 @@ Lora ([5bef54f](https://github.com/aadnanmt/root.nanoolabs.dev/commit/5bef54f4b6
 - Revert "feat: migrate to Cloudflare Pages adapter"
 
 This reverts commit 54aef73503093dcc72b3fa9cd875b68730c60138. ([284ce3e](https://github.com/aadnanmt/root.nanoolabs.dev/commit/284ce3ee99af05624aa25a7a3035a1e51fbc87db))
+
 - Initial commit: starting a standalone project ([750d4a5](https://github.com/aadnanmt/root.nanoolabs.dev/commit/750d4a54c37b3b07654997515a002747d6323bef))
 
 ### Performance
@@ -191,7 +193,7 @@ This reverts commit 54aef73503093dcc72b3fa9cd875b68730c60138. ([284ce3e](https:/
 ### Refactoring
 
 - Centralize icons and integrate to contact page ([bd23ea5](https://github.com/aadnanmt/root.nanoolabs.dev/commit/bd23ea50c71f12737e66b38a5483861071fd2585))
-- *(focus)* Separate data from UI and integrate new progress component ([59a9a92](https://github.com/aadnanmt/root.nanoolabs.dev/commit/59a9a92d17a45e512cceabb3e078cf0c465258d2))
+- _(focus)_ Separate data from UI and integrate new progress component ([59a9a92](https://github.com/aadnanmt/root.nanoolabs.dev/commit/59a9a92d17a45e512cceabb3e078cf0c465258d2))
 - Update site identity to root.nanoolabs.dev and cleanup uses page ([25bdf9c](https://github.com/aadnanmt/root.nanoolabs.dev/commit/25bdf9caadd556a2b20b6d71f8019c05f1227661))
 - Update now page header and disable work navigation ([4ce71ce](https://github.com/aadnanmt/root.nanoolabs.dev/commit/4ce71cea626f4eb04f26900ecf48c0440b5099d1))
 - Sync asset folders and implement passthroughImageService ([434aa69](https://github.com/aadnanmt/root.nanoolabs.dev/commit/434aa6957fccb6672066aac90e43e860f49b4ba6))
@@ -213,18 +215,19 @@ This reverts commit 54aef73503093dcc72b3fa9cd875b68730c60138. ([284ce3e](https:/
 - Enhance background with twinkling cyan stars and optimize shooting stars ([229850c](https://github.com/aadnanmt/root.nanoolabs.dev/commit/229850c846a8c6d2c0605108774d78a945046074))
 - Improve code text and dark mode colors ([aefc866](https://github.com/aadnanmt/root.nanoolabs.dev/commit/aefc866ccf95f320aba4739f5a69e64ad9e965e8))
 - Remove legacy theme buttons from footer ([35b5a1e](https://github.com/aadnanmt/root.nanoolabs.dev/commit/35b5a1e749403ba4530d2a838984ca0315dc65ad))
-- Format entire project with  prettier ([1e1039f](https://github.com/aadnanmt/root.nanoolabs.dev/commit/1e1039fa6f5fbd25cb5ea670fab896e62422376c))
+- Format entire project with prettier ([1e1039f](https://github.com/aadnanmt/root.nanoolabs.dev/commit/1e1039fa6f5fbd25cb5ea670fab896e62422376c))
 - Implement high-end OLED dark mode, typography overhaul, and update data some about nanoo ([5631da9](https://github.com/aadnanmt/root.nanoolabs.dev/commit/5631da9543301e2dd938ae3f7b6603dc3bbf87ef))
 - Rotating arrow for icon back to top ([5ff58c3](https://github.com/aadnanmt/root.nanoolabs.dev/commit/5ff58c3fa55cce36653f30e42610453c0a641eef))
 - Upgrade navbar, fontAwesome icons and social links ([a31821c](https://github.com/aadnanmt/root.nanoolabs.dev/commit/a31821c687ff9dc1aa679fdd99a213b5723a01c4))
 - Sync border opacity and enhance code block aesthetic ([34862b2](https://github.com/aadnanmt/root.nanoolabs.dev/commit/34862b2e95191a6fbd553f081e866bc0f162e892))
 - Change to navbar floating for ux experience ([5f51434](https://github.com/aadnanmt/root.nanoolabs.dev/commit/5f514346398e81b685c22a040d5b3d72ff6eff29))
 - Refine theme hierarchy, selection colors, and add custom scrollbar ([754110f](https://github.com/aadnanmt/root.nanoolabs.dev/commit/754110f1a4686017d0cd001470172a2f20216879))
-- Format entire project with  prettier ([1c63973](https://github.com/aadnanmt/root.nanoolabs.dev/commit/1c639731498934d925bf061134284ddbf3d157ed))
+- Format entire project with prettier ([1c63973](https://github.com/aadnanmt/root.nanoolabs.dev/commit/1c639731498934d925bf061134284ddbf3d157ed))
 - Change dark mode background to black and add cyan accents ([6ad0287](https://github.com/aadnanmt/root.nanoolabs.dev/commit/6ad0287cb9911a63583c807f3ea45f01182e492c))
-- *(ui)* Enhance dark mode contrast and simplify hove interaction ([fead3ed](https://github.com/aadnanmt/root.nanoolabs.dev/commit/fead3ed69bc85d5fb6752fbc17699a6b7b95939c))
+- _(ui)_ Enhance dark mode contrast and simplify hove interaction ([fead3ed](https://github.com/aadnanmt/root.nanoolabs.dev/commit/fead3ed69bc85d5fb6752fbc17699a6b7b95939c))
 - Change theme dark mode use absolute black ncyan (fav color) ([85a7d82](https://github.com/aadnanmt/root.nanoolabs.dev/commit/85a7d82313370929cc451d3fb54f85ce96b46e9a))
 - Change theme dark mode use absolute black (fav color) ([5f95b41](https://github.com/aadnanmt/root.nanoolabs.dev/commit/5f95b410c75e20252fe79fd4bf8ff094cfd5d41c))
 
-***
-*Generate automatically.*
+---
+
+_Generate automatically._

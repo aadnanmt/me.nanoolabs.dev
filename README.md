@@ -44,13 +44,13 @@ pnpm dev
 
 ## Commands
 
-| Command | What it does |
-|---|---|
-| `pnpm dev` / `bun run dev` | Start dev server |
-| `pnpm build` / `bun run build` | Check types and build |
+| Command                            | What it does             |
+| ---------------------------------- | ------------------------ |
+| `pnpm dev` / `bun run dev`         | Start dev server         |
+| `pnpm build` / `bun run build`     | Check types and build    |
 | `pnpm preview` / `bun run preview` | Preview production build |
-| `pnpm lint` / `bun run lint` | Check code style |
-| `pnpm format` / `bun run format` | Auto-format code |
+| `pnpm lint` / `bun run lint`       | Check code style         |
+| `pnpm format` / `bun run format`   | Auto-format code         |
 
 ## License
 
