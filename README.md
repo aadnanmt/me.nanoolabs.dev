@@ -29,7 +29,7 @@ This is my personal website. I build it with **Astro 5** and **Tailwind CSS**. I
 
 ## How to Start
 
-You need **Node.js** and **pnpm**.
+You need **Node.js** and **pnpm** (or **Bun** — Bun can read pnpm lock files).
 
 ```bash
 # Get the code
@@ -46,11 +46,11 @@ pnpm dev
 
 | Command | What it does |
 |---|---|
-| `pnpm dev` | Start dev server |
-| `pnpm build` | Check types and build |
-| `pnpm preview` | Preview production build |
-| `pnpm lint` | Check code style |
-| `pnpm format` | Auto-format code |
+| `pnpm dev` / `bun run dev` | Start dev server |
+| `pnpm build` / `bun run build` | Check types and build |
+| `pnpm preview` / `bun run preview` | Preview production build |
+| `pnpm lint` / `bun run lint` | Check code style |
+| `pnpm format` / `bun run format` | Auto-format code |
 
 ## License
 
