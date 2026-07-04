@@ -1,4 +1,4 @@
-# Root Node - My Digital Garden
+# nagarden - My Digital Garden
 
 My digital garden. I build it with **Astro 5** and **Tailwind CSS**. I write about my life, my learning journey, and Linux.
 
