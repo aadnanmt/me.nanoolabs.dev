@@ -7,8 +7,9 @@ lastUpdated: "2026-05-31"
 ## System & Environment
 
 - **Arch Linux** :: Primary desktop operating system
+- **Package Manager** :: Pacman Only (No AUR)
 - **Zen Kernel** :: Optimized for desktop responsiveness
-- **Hyprland** :: Wayland compositor / window manager
+- **Niri** :: Wayland compositor / window manager
 - **Kitty** :: Terminal emulator
 - **Fish Shell** :: Friendly shell with Starship prompt
 - **Firefox** :: Primary web browser (Desktop)
