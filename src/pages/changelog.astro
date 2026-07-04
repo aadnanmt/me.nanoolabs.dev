@@ -1,0 +1,39 @@
+---
+import { readFileSync } from "fs"
+import PageLayout from "@layouts/PageLayout.astro"
+import Container from "@components/Container.astro"
+import BackToPrev from "@components/BackToPrev.astro"
+import { IconChangelog } from "@lib/iconSystem"
+import { marked } from "marked"
+
+const changelogRaw = readFileSync("CHANGELOG.md", "utf-8")
+const content = await marked.parse(changelogRaw)
+const title = "Garden Changelog"
+const description =
+  "All notable changes to this digital garden and content will be documented here."
+---
+
+<PageLayout title={title} description={description}>
+  <Container>
+    <div class="space-y-10">
+      <BackToPrev href="/explore"> Back to explore </BackToPrev>
+
+      <div
+        class="animate flex items-center gap-2 font-semibold text-black dark:text-white"
+      >
+        <div class="size-5 fill-current">
+          <Fragment set:html={IconChangelog} />
+        </div>
+        {title}
+      </div>
+
+      <article
+        class="animate prose prose-neutral max-w-none dark:prose-invert
+          prose-headings:scroll-mt-20
+          prose-h2:mt-10 prose-h2:border-b prose-h2:border-black/10 prose-h2:pb-2 prose-h2:dark:border-white/10"
+      >
+        <Fragment set:html={content} />
+      </article>
+    </div>
+  </Container>
+</PageLayout>
