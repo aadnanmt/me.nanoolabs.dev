@@ -1,13 +1,14 @@
 ---
-import { readFileSync } from "fs"
+export const prerender = true
+
 import PageLayout from "@layouts/PageLayout.astro"
 import Container from "@components/Container.astro"
 import BackToPrev from "@components/BackToPrev.astro"
 import { IconChangelog } from "@lib/iconSystem"
 import { marked } from "marked"
+import changelogRaw from "../../CHANGELOG.md?raw"
 
-const changelogRaw = readFileSync("CHANGELOG.md", "utf-8")
-const content = await marked.parse(changelogRaw)
+const content = marked.parse(changelogRaw)
 const title = "Garden Changelog"
 const description =
   "All notable changes to this digital garden and content will be documented here."
