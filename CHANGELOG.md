@@ -1,11 +1,29 @@
 # Garden Changelog
 
 All notable changes to this my digital garden and content will be documented here
-## [1.4.11] - 2026-06-30
+## [1.4.12] - 2026-07-04
 
 ### Features & New Content
 
+- Add changelog page ([0c72813](https://github.com/aadnanmt/root.nanoolabs.dev/commit/0c728137ae05514a5e49858edfe193feca12c09f))
+- *(icon)* Add changelog icon ([43423a1](https://github.com/aadnanmt/root.nanoolabs.dev/commit/43423a19f9156e82534323fe2a3a5ead218ea618))
+- Sync explore for link changelog ([fdfe4b4](https://github.com/aadnanmt/root.nanoolabs.dev/commit/fdfe4b41a26f87ca5c01beac95bfab3e3d9b79e4))
+- Add components BackToPrev on contact page ([c7a976e](https://github.com/aadnanmt/root.nanoolabs.dev/commit/c7a976ec5ec852346f843920126ecb9ab3a9fa09))
+- *(garden)* Add description my work ([24d4713](https://github.com/aadnanmt/root.nanoolabs.dev/commit/24d47138e4e455b1b49da61d31e28de0466c7a77))
 - Add changelog link to footer and bump v1.4.11 ([e7e14bf](https://github.com/aadnanmt/root.nanoolabs.dev/commit/e7e14bf13981b24e43fa74d4d2bca22dbc9e7335))
+
+### Garden Growth
+
+- *(uses)* Update system config ([0bfe0f3](https://github.com/aadnanmt/root.nanoolabs.dev/commit/0bfe0f390cbd55d900e0fe8e2179cc85f569448f))
+- Generate changelog for v1.4.11 ([6c6b317](https://github.com/aadnanmt/root.nanoolabs.dev/commit/6c6b3177d31c24b6bd6b6142bfdf5e5c5067036a))
+
+### Maintenance
+
+- Bump version to 1.4.12 ([fb95221](https://github.com/aadnanmt/root.nanoolabs.dev/commit/fb95221fbf6cfae7ea14ba2594cce5094636bad9))
+
+### Refactoring
+
+- *(link)* Change to url path changelog ([5211273](https://github.com/aadnanmt/root.nanoolabs.dev/commit/52112734514abba4a316051f793961951e385c44))
 
 ## [1.4.10] - 2026-06-30
 
@@ -55,8 +73,7 @@ All notable changes to this my digital garden and content will be documented her
 - Setup git lfs and track webp assets ([2f856f9](https://github.com/aadnanmt/root.nanoolabs.dev/commit/2f856f9cbff6f3b7e09f56ebd0dd51bf7550daf6))
 - Feat: migrate to Cloudflare Pages adapter
 - install compatible @astrojs/cloudflare adapter for Astro v5
-- configure astro.config.mjs with 'server' output and the Cloudflare adapter
- ([54aef73](https://github.com/aadnanmt/root.nanoolabs.dev/commit/54aef73503093dcc72b3fa9cd875b68730c60138))
+- configure astro.config.mjs with 'server' output and the Cloudflare adapter ([54aef73](https://github.com/aadnanmt/root.nanoolabs.dev/commit/54aef73503093dcc72b3fa9cd875b68730c60138))
 - Add focus page and update site visuals ([7e46a54](https://github.com/aadnanmt/root.nanoolabs.dev/commit/7e46a5432826314ae6b4cd3f82587bbf320622aa))
 - Finalize brand assets (SVG favicons, whoami og:image) and restore typography & spacing standards ([ec3b56a](https://github.com/aadnanmt/root.nanoolabs.dev/commit/ec3b56aa6aef1e356121415a9c7b02d7215e8610))
 - Add new page for Linux commands wiki ([66c1bc9](https://github.com/aadnanmt/root.nanoolabs.dev/commit/66c1bc96e17dd7848005d6622e8bae74f2b57e38))
@@ -83,8 +100,7 @@ All notable changes to this my digital garden and content will be documented her
 - Add link in footer to credits page ([1114ab8](https://github.com/aadnanmt/root.nanoolabs.dev/commit/1114ab8814f4e29c93bf1640a47e3063937df468))
 - Page credits for as a way to say  thanks ([deb27b6](https://github.com/aadnanmt/root.nanoolabs.dev/commit/deb27b6df845e9677e23c77119913e3a3578e553))
 - Feat: implement geist sans primary font and remove
-Lora
- ([5bef54f](https://github.com/aadnanmt/root.nanoolabs.dev/commit/5bef54f4b67a44ffb50cb8ff393fc404763f8682))
+Lora ([5bef54f](https://github.com/aadnanmt/root.nanoolabs.dev/commit/5bef54f4b67a44ffb50cb8ff393fc404763f8682))
 
 ### Garden Growth
 
@@ -146,16 +162,13 @@ Lora
 - *(uses)* Add Aegis to 2FA software list ([5953757](https://github.com/aadnanmt/root.nanoolabs.dev/commit/595375772a59031354ddb091da1543ef0caf4984))
 - Archive missing Nanoo Labs milestones and update first-step ([b6af0d1](https://github.com/aadnanmt/root.nanoolabs.dev/commit/b6af0d1412971c90321c2a20423aa0c1507b7e5b))
 - Implementation track ago logic for last.fm track and release stable ([52625c8](https://github.com/aadnanmt/root.nanoolabs.dev/commit/52625c8be44ef0a232fcac2ce5443bfb1431910a))
-- Merge branch 'main' into feature/lastfm-api
- ([9cba8b7](https://github.com/aadnanmt/root.nanoolabs.dev/commit/9cba8b774a44058498ec12fbc0d9ccd622af90f8))
+- Merge branch 'main' into feature/lastfm-api ([9cba8b7](https://github.com/aadnanmt/root.nanoolabs.dev/commit/9cba8b774a44058498ec12fbc0d9ccd622af90f8))
 - Add git log hack tutorial with result samples ([c81a668](https://github.com/aadnanmt/root.nanoolabs.dev/commit/c81a668432adbf77afc6952fcae2b3b99d58f856))
 - Update project documentation and kaomoji note ([2a98952](https://github.com/aadnanmt/root.nanoolabs.dev/commit/2a9895218f49f2efd33b896beff32621c4923f6f))
 - Revert "feat: migrate to Cloudflare Pages adapter"
 
-This reverts commit 54aef73503093dcc72b3fa9cd875b68730c60138.
- ([284ce3e](https://github.com/aadnanmt/root.nanoolabs.dev/commit/284ce3ee99af05624aa25a7a3035a1e51fbc87db))
-- Initial commit: starting a standalone project
- ([750d4a5](https://github.com/aadnanmt/root.nanoolabs.dev/commit/750d4a54c37b3b07654997515a002747d6323bef))
+This reverts commit 54aef73503093dcc72b3fa9cd875b68730c60138. ([284ce3e](https://github.com/aadnanmt/root.nanoolabs.dev/commit/284ce3ee99af05624aa25a7a3035a1e51fbc87db))
+- Initial commit: starting a standalone project ([750d4a5](https://github.com/aadnanmt/root.nanoolabs.dev/commit/750d4a54c37b3b07654997515a002747d6323bef))
 
 ### Performance
 
