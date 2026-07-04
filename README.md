@@ -1,27 +1,31 @@
-# Astrolio - My Personal Website
+# Root Node - My Personal Website
 
 This is my personal website. I build it with **Astro 5** and **Tailwind CSS**. It is my "Digital Garden" where I write about my life, my learning journey, and Linux.
 
 ## Live
 
-[me.nanoolabs.dev](https://me.nanoolabs.dev)
-[astrolio.pages.dev](https://astrolio.pages.dev)
+[root.nanoolabs.dev](https://root.nanoolabs.dev)
 
 ## Features
 
 - **Linux Wiki**: My personal notes for Linux commands.
-- **My Journey**: I write about my growth and lessons here.
+- **Digital Garden**: Blog posts, milestones, and lessons learned.
 - **Focus Page**: See my project progress (Arch Linux style).
+- **Uses Page**: Tools and software I use every day.
+- **Now Page**: What I am focusing on right now.
+- **Changelog**: Track every update to this site.
 - **Cool Background**: Twinkling stars and shooting stars.
-- **Fast**: Built for speed and works on Cloudflare Pages.
+- **Last.fm Integration**: Shows what music I am listening to.
 - **Dark Mode**: OLED black and Cyan color.
 
 ## Tech I Use
 
 - **Astro 5**: The web framework.
-- **Tailwind CSS**: For styling.
+- **Tailwind CSS 3**: For styling.
 - **TypeScript**: For better code.
-- **Cloudflare**: To host the website.
+- **Cloudflare Pages**: To host the website.
+- **pnpm**: Fast package manager.
+- **MDX**: For writing content.
 
 ## How to Start
 
@@ -37,6 +41,16 @@ pnpm install
 # Start the site
 pnpm dev
 ```
+
+## Commands
+
+| Command | What it does |
+|---|---|
+| `pnpm dev` | Start dev server |
+| `pnpm build` | Check types and build |
+| `pnpm preview` | Preview production build |
+| `pnpm lint` | Check code style |
+| `pnpm format` | Auto-format code |
 
 ## License
 
