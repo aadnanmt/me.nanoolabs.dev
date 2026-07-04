@@ -1,6 +1,17 @@
 # Garden Changelog
 
 All notable changes to this my digital garden and content will be documented here
+## [1.4.13] - 2026-07-04
+
+### Bug Fixes
+
+- Inline CHANGELOG.md via ?raw import instead of readFileSync ([3e7d8b3](https://github.com/aadnanmt/root.nanoolabs.dev/commit/3e7d8b385e02a1b95ec63a3cb75e01d9904b9734))
+- Inline CHANGELOG.md via ?raw import instead of readFileSync ([f4c7f71](https://github.com/aadnanmt/root.nanoolabs.dev/commit/f4c7f71388dd7d88778ff6cae2a29f18bdbea2d4))
+
+### Garden Growth
+
+- Generate changelog for v1.4.12 ([432207d](https://github.com/aadnanmt/root.nanoolabs.dev/commit/432207d01be2309ac2eb1d5428e89e25af041626))
+
 ## [1.4.12] - 2026-07-04
 
 ### Features & New Content
