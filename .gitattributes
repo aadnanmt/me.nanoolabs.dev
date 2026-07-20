@@ -1,1 +1,1 @@
-
+public/content/** !filter !diff !merge
