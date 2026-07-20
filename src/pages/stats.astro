@@ -20,12 +20,23 @@ const gardenStats = [
   { name: "Milestones", count: allMilestones.length, color: "text-cyan-500" },
 ]
 
-// Fetch data
-const response = await fetch(
-  "https://raw.githubusercontent.com/aadnanmt/readmeSync/main/stats.json"
-)
+// Fetch data (via CF Function proxy with edge cache in prod)
+const isProd = import.meta.env.CF_PAGES === "1" || process.env.CF_PAGES === "1"
+const statsUrl = isProd
+  ? "/stats"
+  : "https://raw.githubusercontent.com/aadnanmt/readmeSync/main/stats.json"
+const response = await fetch(statsUrl)
 const stats = await response.json()
-const { totalCommits, languages, updatedAt } = stats
+const {
+  totalCommits,
+  repoCount,
+  totalDiskUsage,
+  mainLicense,
+  languages,
+  updatedAt,
+} = stats
+
+const diskMB = Math.round(totalDiskUsage / 1024)
 
 interface Language {
   name: string
@@ -41,7 +52,8 @@ function PacmanBar(percentage: number) {
 }
 
 const title = "Statistics"
-const description = "My activity, garden stats, and language distribution."
+const description =
+  "Content count in this digital garden, GitHub activity, and language breakdown from my open-source contributions."
 ---
 
 <PageLayout title={title} description={description}>
@@ -59,8 +71,8 @@ const description = "My activity, garden stats, and language distribution."
       </div>
 
       <p class="animate">
-        It represents my programming activity, garden statistic, and language
-        preferences over the past year.
+        Content count in this digital garden, GitHub activity across all repos,
+        and language breakdown from my open-source contributions.
       </p>
 
       <div class="animate space-y-12">
@@ -69,7 +81,7 @@ const description = "My activity, garden stats, and language distribution."
           <h2
             class="border-b border-black/5 pb-2 font-semibold text-black dark:border-white/5 dark:text-white"
           >
-            Garden Metrics
+            Digital Garden
           </h2>
           <div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
             {
@@ -92,9 +104,9 @@ const description = "My activity, garden stats, and language distribution."
           <h2
             class="border-b border-black/5 pb-2 font-semibold text-black dark:border-white/5 dark:text-white"
           >
-            Global Activity
+            GitHub Activity
           </h2>
-          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
             <div class="space-y-1">
               <div class="text-sm tracking-wider opacity-50">Total Commits</div>
               <div class="font-mono text-2xl font-bold text-cyan-500">
@@ -102,11 +114,26 @@ const description = "My activity, garden stats, and language distribution."
               </div>
             </div>
             <div class="space-y-1">
-              <div class="text-sm tracking-wider opacity-50">Last Sync</div>
-              <div class="font-mono text-sm italic">
-                {new Date(updatedAt).toLocaleDateString("en-GB")}
+              <div class="text-sm tracking-wider opacity-50">Repositories</div>
+              <div class="font-mono text-2xl font-bold text-cyan-500">
+                {repoCount}
               </div>
             </div>
+            <div class="space-y-1">
+              <div class="text-sm tracking-wider opacity-50">Disk Usage</div>
+              <div class="font-mono text-2xl font-bold text-cyan-500">
+                {diskMB} MB
+              </div>
+            </div>
+            <div class="space-y-1">
+              <div class="text-sm tracking-wider opacity-50">Main License</div>
+              <div class="font-mono text-2xl font-bold text-cyan-500">
+                {mainLicense}
+              </div>
+            </div>
+          </div>
+          <div class="text-sm italic opacity-50">
+            Last sync: {new Date(updatedAt).toLocaleDateString("en-GB")}
           </div>
         </section>
 
@@ -141,7 +168,7 @@ const description = "My activity, garden stats, and language distribution."
       </div>
 
       <div
-        class="animate mt-12 border-t border-black/10 pt-8 text-xs italic opacity-50 dark:border-white/10"
+        class="animate mt-12 border-t border-black/10 pt-8 text-sm italic opacity-50 dark:border-white/10"
       >
         Source: <Link href="https://github.com/aadnanmt/readmeSync" external
           >github.com/aadnanmt/readmeSync</Link

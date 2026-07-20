@@ -1,0 +1,183 @@
+---
+export const prerender = true
+import { getCollection } from "astro:content"
+import PageLayout from "@layouts/PageLayout.astro"
+import Container from "@components/Container.astro"
+import FormattedDate from "@components/FormattedDate.astro"
+import { readingTime, gitDate } from "@lib/utils"
+import BackToPrev from "@components/BackToPrev.astro"
+import Link from "@components/Link.astro"
+
+export async function getStaticPaths() {
+  const COLLECTIONS = ["blog", "projects", "commands", "milestones"] as const
+  const paths: {
+    params: { collection: string; slug: string | undefined }
+    props: { collection: string; entry: any }
+  }[] = []
+
+  for (const name of COLLECTIONS) {
+    const entries = (await getCollection(name)).filter(
+      (e) => !("draft" in e.data && e.data.draft)
+    )
+    for (const entry of entries) {
+      paths.push({
+        params: { collection: name, slug: entry.slug },
+        props: { collection: name, entry },
+      })
+    }
+  }
+  return paths
+}
+
+const { collection, entry } = Astro.props as any
+
+const moodColor: Record<string, string> = {
+  Good: "text-green-500",
+  Neutral: "text-yellow-500",
+  Bad: "text-red-500",
+  Tired: "text-blue-500",
+  SoHappy: "text-cyan-500",
+  SoBad: "text-orange-500",
+}
+
+const moodEmoji: Record<string, string> = {
+  Good: "😊",
+  Neutral: "😐",
+  Bad: "😔",
+  Tired: "😴",
+  SoHappy: "😁",
+  SoBad: "😿",
+}
+
+const { Content } = await entry.render()
+const lastUpdated = gitDate(`${collection}/${entry.id}`)
+const hasDate = collection !== "commands"
+const useProse = collection === "commands" || collection === "milestones"
+const bigTitle = collection === "commands" || collection === "milestones"
+const hasDemo = collection === "projects"
+const hasMood = collection === "milestones"
+const hasLesson = collection === "milestones"
+const currentMoodColor =
+  hasMood && entry.data.mood ? (moodColor[entry.data.mood] ?? "") : ""
+const currentMoodEmoji =
+  hasMood && entry.data.mood ? (moodEmoji[entry.data.mood] ?? "") : ""
+---
+
+<PageLayout title={entry.data.title} description={entry.data.description}>
+  <Container>
+    <div class="animate">
+      <BackToPrev href={`/${collection}`}>
+        {" "}Back to {collection}{" "}
+      </BackToPrev>
+    </div>
+    <div class="my-10 space-y-1">
+      <div class="animate flex items-center gap-1.5">
+        {
+          hasDate ? (
+            <>
+              <div class="font-base text-sm">
+                <FormattedDate date={entry.data.date} />
+              </div>
+              {collection !== "milestones" && (
+                <>
+                  &bull;
+                  <div class="font-base text-sm">{readingTime(entry.body)}</div>
+                </>
+              )}
+            </>
+          ) : (
+            <div class="font-base text-sm">
+              Category:{" "}
+              <span class="font-semibold text-cyan-500">
+                {entry.data.category}
+              </span>
+            </div>
+          )
+        }
+        {
+          lastUpdated && (
+            <>
+              &bull;
+              <div class="font-base text-sm italic opacity-75">
+                Last updated: <FormattedDate date={lastUpdated} />
+              </div>
+            </>
+          )
+        }
+        {
+          hasMood && entry.data.mood && (
+            <>
+              &bull;
+              <div class="font-base text-sm">
+                Mood:{" "}
+                <span class={`${currentMoodColor} font-semibold`}>
+                  {entry.data.mood} {currentMoodEmoji}
+                </span>
+              </div>
+            </>
+          )
+        }
+      </div>
+      <div
+        class={`animate font-semibold text-black dark:text-white${
+          bigTitle ? " text-3xl" : " text-2xl"
+        }`}
+      >
+        {entry.data.title}
+      </div>
+      {
+        hasDemo && (entry.data.demoURL || entry.data.repoURL) && (
+          <nav class="animate flex gap-1">
+            {entry.data.demoURL && (
+              <Link href={entry.data.demoURL} external>
+                demo
+              </Link>
+            )}
+            {entry.data.demoURL && entry.data.repoURL && <span>/</span>}
+            {entry.data.repoURL && (
+              <Link href={entry.data.repoURL} external>
+                repo
+              </Link>
+            )}
+          </nav>
+        )
+      }
+      {
+        hasLesson && entry.data.lessonLearn && (
+          <p class="animate mt-2 text-sm italic opacity-70">
+            Lesson Learned: &quot;{entry.data.lessonLearn}&quot;
+          </p>
+        )
+      }
+    </div>
+    <article
+      class={`animate${
+        useProse ? " prose prose-neutral max-w-none dark:prose-invert" : ""
+      }`}
+    >
+      <Content />
+    </article>
+    <div
+      class="animate mt-24 border-t border-black/10 pt-10 dark:border-white/10"
+    >
+      <p class="text-sm opacity-75">
+        This content is licensed under
+        <a
+          href="https://creativecommons.org/licenses/by/4.0/"
+          target="_blank"
+          class="underline decoration-cyan-400/50 underline-offset-4 transition-colors hover:text-cyan-400"
+        >
+          CC BY 4.0
+        </a>.
+        <span class="mx-1 opacity-50">|</span>
+        <a
+          href={`https://github.com/aadnanmt/root.nanoolabs.dev/edit/main/src/content/${collection}/${entry.id}`}
+          target="_blank"
+          class="underline decoration-cyan-400/50 underline-offset-4 transition-colors hover:text-cyan-400"
+        >
+          Edit this page
+        </a>
+      </p>
+    </div>
+  </Container>
+</PageLayout>
