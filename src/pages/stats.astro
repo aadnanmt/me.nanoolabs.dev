@@ -20,13 +20,9 @@ const gardenStats = [
   { name: "Milestones", count: allMilestones.length, color: "text-cyan-500" },
 ]
 
-// Fetch data (via CF Function proxy with edge cache in prod)
-const isProd = import.meta.env.CF_PAGES === "1" || process.env.CF_PAGES === "1"
-const SITE = "https://root.nanoolabs.dev"
-const statsUrl = isProd
-  ? `${SITE}/stats`
-  : "https://raw.githubusercontent.com/aadnanmt/readmeSync/main/stats.json"
-const response = await fetch(statsUrl)
+const STATS_URL =
+  "https://raw.githubusercontent.com/aadnanmt/readmeSync/main/stats.json"
+const response = await fetch(STATS_URL)
 const stats = await response.json()
 const {
   totalCommits,
