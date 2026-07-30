@@ -12,7 +12,7 @@ import {
   IconTelegram,
   IconInstagram,
   IconKofi,
-  IconGitlab,
+  IconCodeberg,
 } from "@lib/iconSystem"
 
 const getIcon = (name: string) => {
@@ -27,8 +27,8 @@ const getIcon = (name: string) => {
       return IconInstagram
     case "ko-fi":
       return IconKofi
-    case "gitlab":
-      return IconGitlab
+    case "codeberg":
+      return IconCodeberg
     default:
       return IconEmail
   }
@@ -88,18 +88,7 @@ const getIcon = (name: string) => {
                     </Link>
                   </div>
                   <span class="text-xs text-zinc-500">
-                    {SOCIAL.NAME === "github" &&
-                      "Where I store my code and experiments."}
-                    {SOCIAL.NAME === "gitlab" &&
-                      "Where I backup my code and experiments."}
-                    {SOCIAL.NAME === "X-Twitter" &&
-                      "Thoughts, updates, and tech rants."}
-                    {SOCIAL.NAME === "telegram" &&
-                      "Best for a direct and quick technical chat."}
-                    {SOCIAL.NAME === "instagram" &&
-                      "Personal bits and visual logs."}
-                    {SOCIAL.NAME === "ko-fi" &&
-                      "Support my work or buy me a cup of coffee."}
+                    {SOCIAL.DESCRIPTION}
                   </span>
                 </li>
               ))

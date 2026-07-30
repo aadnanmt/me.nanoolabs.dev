@@ -38,25 +38,31 @@ export const SOCIALS: Socials = [
   {
     NAME: "x-twitter",
     HREF: "https://twitter.com/aadnanmt",
+    DESCRIPTION: "Thoughts, updates, and tech rants.",
   },
   {
     NAME: "github",
     HREF: "https://github.com/aadnanmt",
+    DESCRIPTION: "Where I store my code and experiments.",
   },
   {
-    NAME: "gitlab",
-    HREF: "https://gitlab.com/users/aadnanmt",
+    NAME: "codeberg",
+    HREF: "https://codeberg.org/aadnanmt",
+    DESCRIPTION: "Primary forge and backup for my code and projects.",
   },
   {
     NAME: "telegram",
     HREF: "https://t.me/adnanbuilds",
+    DESCRIPTION: "Best for a direct and quick technical chat.",
   },
   {
     NAME: "instagram",
     HREF: "https://www.instagram.com/aadnanmt",
+    DESCRIPTION: "Personal bits and visual logs.",
   },
   {
     NAME: "ko-fi",
     HREF: "https://ko-fi.com/aadnanmt",
+    DESCRIPTION: "Support my work or buy me a cup of coffee.",
   },
 ]

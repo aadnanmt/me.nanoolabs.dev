@@ -14,6 +14,7 @@ export type Metadata = {
 export type Socials = {
   NAME: string
   HREF: string
+  DESCRIPTION: string
 }[]
 
 export type LastFMTrack = {
