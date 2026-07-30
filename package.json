@@ -1,7 +1,6 @@
 {
   "name": "nagarden",
   "type": "module",
-  "version": "1.4.15",
   "scripts": {
     "dev": "astro dev",
     "dev:network": "astro dev --host",
