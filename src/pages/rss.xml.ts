@@ -1,7 +1,7 @@
 import rss from "@astrojs/rss"
 import { getCollection } from "astro:content"
 import { HOME } from "@consts"
-import { marked } from "marked"
+import { Marked, type Renderer } from "marked"
 
 type Context = {
   site: string
@@ -20,6 +20,18 @@ export async function GET(context: Context) {
     (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
   )
 
+  const md = new Marked({
+    renderer: {
+      image({ href, title, text }) {
+        const src = href.startsWith("/")
+          ? new URL(href, context.site).href
+          : href
+        const t = title ? ` title="${title}"` : ""
+        return `<img src="${src}" alt="${text}"${t}>`
+      },
+    } as Partial<Renderer>,
+  })
+
   return rss({
     title: HOME.TITLE,
     description: HOME.DESCRIPTION,
@@ -31,7 +43,7 @@ export async function GET(context: Context) {
         (item.collection === "milestones" ? item.data.lessonLearn : ""),
       pubDate: item.data.date,
       link: `/${item.collection}/${item.slug}/`,
-      content: marked.parse(item.body) as string,
+      content: md.parse(item.body) as string,
     })),
   })
 }

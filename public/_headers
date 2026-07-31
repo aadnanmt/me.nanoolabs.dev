@@ -1,10 +1,14 @@
-# Security headers for Root Node (root.nanoolabs.dev)
+# Security headers for Site (root.nanoolabs.dev)
 /*
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+# RSS feed
+/rss.xml
+  Content-Type: application/rss+xml
 
 # Astro process assets
 /_astro/*
