@@ -13,6 +13,7 @@ import {
   IconInstagram,
   IconKofi,
   IconCodeberg,
+  IconDiscord,
 } from "@lib/iconSystem"
 
 const getIcon = (name: string) => {
@@ -29,6 +30,8 @@ const getIcon = (name: string) => {
       return IconKofi
     case "codeberg":
       return IconCodeberg
+    case "discord":
+      return IconDiscord
     default:
       return IconEmail
   }

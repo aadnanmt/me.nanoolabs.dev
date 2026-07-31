@@ -56,6 +56,11 @@ export const SOCIALS: Socials = [
     DESCRIPTION: "Best for a direct and quick technical chat.",
   },
   {
+    NAME: "discord",
+    HREF: "https://discord.com/users/1155470881183760525",
+    DESCRIPTION: "Direct chat, mostly for tech talk and gaming.",
+  },
+  {
     NAME: "instagram",
     HREF: "https://www.instagram.com/aadnanmt",
     DESCRIPTION: "Personal bits and visual logs.",
