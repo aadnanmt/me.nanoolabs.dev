@@ -3,7 +3,7 @@ import { getMood } from "@lib/imood"
 import { getEmoji } from "@lib/emoji"
 import Link from "@components/Link.astro"
 
-const { mood, content, error } = await getMood()
+const { mood, content, updated, error } = await getMood()
 
 // Silent fail
 if (error || !mood) {
@@ -11,6 +11,12 @@ if (error || !mood) {
 }
 
 const emoji = getEmoji(mood)
+const updatedText = updated
+  ? ` - Updated ${new Date(updated).toLocaleDateString("en-US", {
+      month: "short",
+      day: "numeric",
+    })}`
+  : ""
 ---
 
 <div
@@ -21,9 +27,9 @@ const emoji = getEmoji(mood)
   >
     {emoji}
   </div>
-  <div class="flex flex-col overflow-hidden">
+  <div class="flex flex-col gap-0.5 overflow-hidden">
     <span class="text-xs font-semibold uppercase tracking-widest opacity-50">
-      Current mood
+      Current mood{updatedText}
     </span>
     <Link
       href={`https://www.imood.com/finder?m=${encodeURIComponent(mood)}&search=do`}
