@@ -2,24 +2,18 @@ import rss from "@astrojs/rss"
 import { getCollection } from "astro:content"
 import { HOME } from "@consts"
 import { Marked, type Renderer } from "marked"
-
 type Context = {
   site: string
 }
-
 export async function GET(context: Context) {
   const blog = (await getCollection("blog")).filter((post) => !post.data.draft)
-
   const projects = (await getCollection("projects")).filter(
     (project) => !project.data.draft
   )
-
   const milestones = await getCollection("milestones")
-
   const items = [...blog, ...projects, ...milestones].sort(
     (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
   )
-
   const md = new Marked({
     renderer: {
       image({ href, title, text }) {
@@ -31,7 +25,6 @@ export async function GET(context: Context) {
       },
     } as Partial<Renderer>,
   })
-
   return rss({
     title: HOME.TITLE,
     description: HOME.DESCRIPTION,

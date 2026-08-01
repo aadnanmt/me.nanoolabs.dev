@@ -8,11 +8,9 @@ export async function getMood(): Promise<ImoodResponse> {
   const now = Date.now()
   if (cache && now - lastFetch < TTL) return cache
 
-  const username =
-    import.meta.env.IMOOD_USERNAME || process.env.IMOOD_USERNAME
+  const username = import.meta.env.IMOOD_USERNAME || process.env.IMOOD_USERNAME
 
-  if (!username)
-    return { mood: null, error: "Missing imood config." }
+  if (!username) return { mood: null, error: "Missing imood config." }
 
   try {
     const response = await fetch(
@@ -22,14 +20,17 @@ export async function getMood(): Promise<ImoodResponse> {
       }
     )
 
-    if (!response.ok)
-      throw new Error(`imood error: ${response.statusText}`)
+    if (!response.ok) throw new Error(`imood error: ${response.statusText}`)
 
     const feed = await response.text()
 
     const mood = feed.match(/<entry>[\s\S]*?<title>([^<]+)<\/title>/)?.[1]
-    const updated = feed.match(/<entry>[\s\S]*?<updated>([^<]+)<\/updated>/)?.[1]
-    const content = feed.match(/<entry>[\s\S]*?<content>([^<]*)<\/content>/)?.[1]
+    const updated = feed.match(
+      /<entry>[\s\S]*?<updated>([^<]+)<\/updated>/
+    )?.[1]
+    const content = feed.match(
+      /<entry>[\s\S]*?<content>([^<]*)<\/content>/
+    )?.[1]
 
     if (!mood) {
       lastFetch = now

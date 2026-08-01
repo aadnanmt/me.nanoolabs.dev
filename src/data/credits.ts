@@ -27,8 +27,7 @@ export const CREDITS = [
   },
   {
     NAME: "FontAwesome",
-    DESCRIPTION:
-      "Source of the brand icons, licensed under CC BY 4.0.",
+    DESCRIPTION: "Source of the brand icons, licensed under CC BY 4.0.",
     HREF: "https://fontawesome.com",
   },
   {

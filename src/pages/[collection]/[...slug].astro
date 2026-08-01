@@ -76,11 +76,16 @@ const hasMood = collection === "milestones"
 const hasLesson = collection === "milestones"
 const currentMoodColor =
   hasMood && entry.data.mood ? (moodColor[entry.data.mood] ?? "") : ""
-const currentMoodEmoji = hasMood && entry.data.mood ? getEmoji(entry.data.mood) : ""
+const currentMoodEmoji =
+  hasMood && entry.data.mood ? getEmoji(entry.data.mood) : ""
 const ogImage = `/content/${collection}/${entry.slug}/cover.webp`
 ---
 
-<PageLayout title={entry.data.title} description={entry.data.description} image={ogImage}>
+<PageLayout
+  title={entry.data.title}
+  description={entry.data.description}
+  image={ogImage}
+>
   <Container>
     <div class="animate">
       <BackToPrev href={`/${collection}`}>
