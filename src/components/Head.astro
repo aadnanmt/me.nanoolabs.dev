@@ -157,6 +157,11 @@ const faviconUrl = "https://cdn.nanoolabs.dev/brands/latest/nanoo.svg"
     document.querySelectorAll("article pre").forEach((pre) => {
       if (pre.querySelector(".copy-code")) return
 
+      const wrapper = document.createElement("div")
+      wrapper.className = "copy-wrap"
+      pre.parentNode?.insertBefore(wrapper, pre)
+      wrapper.appendChild(pre)
+
       const button = document.createElement("button")
       button.type = "button"
       button.className = "copy-code"
@@ -175,7 +180,7 @@ const faviconUrl = "https://cdn.nanoolabs.dev/brands/latest/nanoo.svg"
         }
       })
 
-      pre.appendChild(button)
+      wrapper.appendChild(button)
     })
   }
 
