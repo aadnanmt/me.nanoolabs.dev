@@ -33,6 +33,7 @@ export type NowPlayingResponse = {
 
 export type ImoodResponse = {
   mood: string | null
+  content?: string
   updated?: string
   error?: string
 }

@@ -29,13 +29,14 @@ export async function getMood(): Promise<ImoodResponse> {
 
     const mood = feed.match(/<entry>[\s\S]*?<title>([^<]+)<\/title>/)?.[1]
     const updated = feed.match(/<entry>[\s\S]*?<updated>([^<]+)<\/updated>/)?.[1]
+    const content = feed.match(/<entry>[\s\S]*?<content>([^<]*)<\/content>/)?.[1]
 
     if (!mood) {
       lastFetch = now
       return cache || { mood: null }
     }
 
-    cache = { mood, updated }
+    cache = { mood, content: content?.trim() || undefined, updated }
     lastFetch = now
     return cache
   } catch (error) {

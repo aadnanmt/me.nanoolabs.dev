@@ -3,7 +3,7 @@ import { getMood } from "@lib/imood"
 import { getEmoji } from "@lib/emoji"
 import Link from "@components/Link.astro"
 
-const { mood, error } = await getMood()
+const { mood, content, error } = await getMood()
 
 // Silent fail
 if (error || !mood) {
@@ -32,5 +32,8 @@ const emoji = getEmoji(mood)
     >
       {mood}
     </Link>
+    {content && (
+      <span class="truncate text-xs opacity-60">{content}</span>
+    )}
   </div>
 </div>
