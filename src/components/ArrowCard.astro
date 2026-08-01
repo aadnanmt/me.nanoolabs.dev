@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content"
+import { getEmoji } from "@lib/emoji"
 
 type Props = {
   entry:
@@ -10,6 +11,8 @@ type Props = {
 }
 
 const { entry } = Astro.props
+const mood =
+  entry.collection === "milestones" ? entry.data.mood : undefined
 ---
 
 <a
@@ -18,7 +21,7 @@ const { entry } = Astro.props
 >
   <div class="flex flex-1 flex-col truncate">
     <div class="font-semibold">
-      {entry.data.title}
+      {mood ? `${getEmoji(mood)} ` : ""}{entry.data.title}
     </div>
     <div class="text-sm">
       {entry.data.description}
