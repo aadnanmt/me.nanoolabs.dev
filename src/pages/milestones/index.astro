@@ -4,14 +4,14 @@ import PageLayout from "@layouts/PageLayout.astro"
 import Container from "@components/Container.astro"
 import ArrowCard from "@components/ArrowCard.astro"
 import { IconMilestones } from "@lib/iconSystem"
+import { MILESTONES } from "@consts"
 import BackToPrev from "@components/BackToPrev.astro"
 const milestones = (await getCollection("milestones")).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf() // Sort by date descending
 )
 
-const title = "My Milestones"
-const description =
-  "Documenting my personal growth, reflections, and lessons learned on this journey."
+const title = MILESTONES.TITLE
+const description = MILESTONES.DESCRIPTION
 ---
 
 <PageLayout title={title} description={description}>

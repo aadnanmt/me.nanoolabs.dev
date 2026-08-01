@@ -3,14 +3,15 @@ import PageLayout from "@layouts/PageLayout.astro"
 import Container from "@components/Container.astro"
 import BackToPrev from "@components/BackToPrev.astro"
 import { IconFocus } from "@lib/iconSystem"
+import { FOCUS } from "@consts"
 import YearProgress from "@components/YearProgress.astro"
 import ProgressBar from "@components/ProgressBar.astro"
 import { MYFOCUS } from "@data/focus"
 ---
 
 <PageLayout
-  title="Focus"
-  description="Current focus and project progress, Ascii style."
+  title={FOCUS.TITLE}
+  description={FOCUS.DESCRIPTION}
 >
   <Container>
     <div class="space-y-10">

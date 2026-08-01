@@ -6,6 +6,7 @@ import BackToPrev from "@components/BackToPrev.astro"
 import { IconStats } from "@lib/iconSystem"
 import Link from "@components/Link.astro"
 import NowPlaying from "@components/NowPlaying.astro"
+import { STATS } from "@consts"
 
 // Fetch local collection count
 const allBlog = await getCollection("blog", ({ data }) => !data.draft)
@@ -48,12 +49,9 @@ function PacmanBar(percentage: number) {
   return `[${hash}${dash}] ${percentage.toFixed(1)}%`
 }
 
-const title = "Statistics"
-const description =
-  "Content count in this digital garden, GitHub activity, and language breakdown from my open-source contributions."
 ---
 
-<PageLayout title={title} description={description}>
+<PageLayout title={STATS.TITLE} description={STATS.DESCRIPTION}>
   <Container>
     <div class="space-y-10">
       <BackToPrev href="/explore"> Back to explore </BackToPrev>

@@ -4,73 +4,14 @@ import Container from "@components/Container.astro"
 import BackToPrev from "@components/BackToPrev.astro"
 import Link from "@components/Link.astro"
 import { IconHome } from "@lib/iconSystem"
+import { EXPLORE } from "@consts"
+import { EXPLORE_PAGES, MAIN_PAGES } from "@data/pages"
 
-const additionalPages = [
-  {
-    name: "Commands",
-    href: "/commands",
-    desc: "My personal Linux command wiki and hacks.",
-  },
-  {
-    name: "Now",
-    href: "/now",
-    desc: "What I'm focusing on at this exact moment.",
-  },
-  {
-    name: "Milestones",
-    href: "/milestones",
-    desc: "Documenting lessons learned on my journey",
-  },
-  {
-    name: "Uses",
-    href: "/uses",
-    desc: "The tools, software, and stack I use every day.",
-  },
-  {
-    name: "Statistics",
-    href: "/stats",
-    desc: "My GitHub activity and language distribution.",
-  },
-  {
-    name: "Focus",
-    href: "/focus",
-    desc: "What I'm currently working on and its progress.",
-  },
-  {
-    name: "Credits",
-    href: "/credits",
-    desc: "Tools and people that made this site possible.",
-  },
-]
-
-const mainPages = [
-  { name: "Home", href: "/", desc: "The beginning of everything." },
-  {
-    name: "Blog",
-    href: "/blog",
-    desc: "My thoughts, tutorials, and technical articles.",
-  },
-  {
-    name: "Contact",
-    href: "/contact",
-    desc: "Get in touch with me for collaboration or chats.",
-  },
-  /*
-  {
-    name: "Work",
-    href: "/work",
-    desc: "My journey and experiences.",
-  },
-  */
-  {
-    name: "Projects",
-    href: "/projects",
-    desc: "A showcase of things I've built.",
-  },
-]
+const additionalPages = EXPLORE_PAGES
+const mainPages = MAIN_PAGES
 ---
 
-<PageLayout title="Explore" description="Explore all pages on this site.">
+<PageLayout title={EXPLORE.TITLE} description={EXPLORE.DESCRIPTION}>
   <Container>
     <div class="space-y-10">
       <div class="animate">

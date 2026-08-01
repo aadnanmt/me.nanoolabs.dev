@@ -1,6 +1,6 @@
 ---
 import Link from "@components/Link.astro"
-import { SITE } from "@consts"
+import { SITE, SOCIALS } from "@consts"
 import { IconGithub } from "@lib/iconSystem"
 ---
 
@@ -36,7 +36,7 @@ import { IconGithub } from "@lib/iconSystem"
       <div class="ml-1 mr-1 h-4 w-px bg-black/10 dark:bg-white/20 sm:ml-2">
       </div>
       <Link
-        href="https://github.com/aadnanmt"
+        href={SOCIALS.find((s) => s.NAME === "github")?.HREF || SITE.REPO}
         external
         aria-label="GitHub"
         underline={false}

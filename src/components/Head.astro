@@ -22,9 +22,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 const {
   title,
   description,
-  image = "https://cdn.nanoolabs.dev/assets/identity/whoami.webp",
+  image = `${SITE.CDN}/assets/identity/whoami.webp`,
 } = Astro.props
-const faviconUrl = "https://cdn.nanoolabs.dev/brands/latest/nanoo.svg"
+const faviconUrl = `${SITE.CDN}/brands/latest/nanoo.svg`
 ---
 
 <!-- Global Metadata -->

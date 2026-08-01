@@ -1,6 +1,9 @@
 export type Site = {
   NAME: string
   EMAIL: string
+  URL: string
+  REPO: string
+  CDN: string
   NUM_POSTS_ON_HOMEPAGE: number
   NUM_WORKS_ON_HOMEPAGE: number
   NUM_PROJECTS_ON_HOMEPAGE: number
@@ -16,6 +19,12 @@ export type Socials = {
   HREF: string
   DESCRIPTION: string
 }[]
+
+export type ExplorePage = {
+  name: string
+  href: string
+  desc: string
+}
 
 export type LastFMTrack = {
   name: string
