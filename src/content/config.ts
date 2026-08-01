@@ -1,4 +1,5 @@
 import { defineCollection, z } from "astro:content"
+import { MILESTONE_MOODS } from "@lib/emoji"
 
 const blog = defineCollection({
   type: "content",
@@ -30,6 +31,7 @@ const projects = defineCollection({
     draft: z.boolean().optional(),
     demoURL: z.string().optional(),
     repoURL: z.string().optional(),
+    category: z.enum(["personal", "nanoo"]).optional().default("personal"),
   }),
 })
 
@@ -65,9 +67,7 @@ const milestones = defineCollection({
   schema: z.object({
     title: z.string(),
     date: z.coerce.date(),
-    mood: z
-      .enum(["Good", "Neutral", "Bad", "Tired", "SoHappy", "Sobad"])
-      .optional(),
+    mood: z.enum(MILESTONE_MOODS).optional(),
     lessonLearn: z.string().optional(),
     tags: z.array(z.string()).optional(),
     description: z.string().optional(),

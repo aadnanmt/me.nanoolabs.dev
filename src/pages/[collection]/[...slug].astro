@@ -5,6 +5,7 @@ import PageLayout from "@layouts/PageLayout.astro"
 import Container from "@components/Container.astro"
 import FormattedDate from "@components/FormattedDate.astro"
 import { readingTime, gitDate } from "@lib/utils"
+import { getEmoji } from "@lib/emoji"
 import BackToPrev from "@components/BackToPrev.astro"
 import { SITE } from "@consts"
 import Link from "@components/Link.astro"
@@ -65,15 +66,6 @@ const moodColor: Record<string, string> = {
   SoBad: "text-orange-500",
 }
 
-const moodEmoji: Record<string, string> = {
-  Good: "😊",
-  Neutral: "😐",
-  Bad: "😔",
-  Tired: "😴",
-  SoHappy: "😁",
-  SoBad: "😿",
-}
-
 const { Content } = await entry.render()
 const lastUpdated = gitDate(`${collection}/${entry.id}`)
 const hasDate = collection !== "commands"
@@ -84,8 +76,7 @@ const hasMood = collection === "milestones"
 const hasLesson = collection === "milestones"
 const currentMoodColor =
   hasMood && entry.data.mood ? (moodColor[entry.data.mood] ?? "") : ""
-const currentMoodEmoji =
-  hasMood && entry.data.mood ? (moodEmoji[entry.data.mood] ?? "") : ""
+const currentMoodEmoji = hasMood && entry.data.mood ? getEmoji(entry.data.mood) : ""
 const ogImage = `/content/${collection}/${entry.slug}/cover.webp`
 ---
 

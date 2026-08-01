@@ -37,6 +37,15 @@ const emojiMap: Record<string, string> = {
   neutral: "😐",
 }
 
+export const MILESTONE_MOODS = [
+  "Good",
+  "Neutral",
+  "Bad",
+  "Tired",
+  "SoHappy",
+  "SoBad",
+] as const
+
 export function getEmoji(mood?: string): string {
   if (!mood) return "🫠"
   return emojiMap[mood.toLowerCase()] || "🫠"
