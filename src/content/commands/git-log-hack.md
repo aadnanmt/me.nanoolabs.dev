@@ -25,6 +25,10 @@ _Default output, a bit too much and messy right?_
 _After we filter and sort by email, clean and simple:_
 <img src="/content/commands/git-log-hack/git-log-user.png" alt="Git Log User"/>
 
+```bash
+git log --format='%ae | %an' | sort
+```
+
 ### Advanced hack for visual history:
 
 1.  `git log` : basic commands git to saw history commit.
@@ -35,5 +39,9 @@ _After we filter and sort by email, clean and simple:_
 
 _Visual graph, now you see all flow branch clearly. whoahhh:_
 <img src="/content/commands/git-log-hack/git-log-graph.png" alt="Git Log Graph All"/>
+
+```bash
+git log -n 2 --oneline --graph --all
+```
 
 currently you know ~ see you again ^\_^
