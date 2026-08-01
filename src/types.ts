@@ -30,3 +30,9 @@ export type NowPlayingResponse = {
   track: LastFMTrack | null
   error?: string
 }
+
+export type ImoodResponse = {
+  mood: string | null
+  updated?: string
+  error?: string
+}

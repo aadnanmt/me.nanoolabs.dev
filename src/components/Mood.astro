@@ -1,0 +1,36 @@
+---
+import { getMood } from "@lib/imood"
+import { getEmoji } from "@lib/emoji"
+import Link from "@components/Link.astro"
+
+const { mood, error } = await getMood()
+
+// Silent fail
+if (error || !mood) {
+  return null
+}
+
+const emoji = getEmoji(mood)
+---
+
+<div
+  class="animate flex items-center gap-4 rounded-lg border border-black/10 p-4 dark:border-white/10"
+>
+  <div
+    class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-md bg-black/5 text-2xl dark:bg-white/5"
+  >
+    {emoji}
+  </div>
+  <div class="flex flex-col overflow-hidden">
+    <span class="text-xs font-semibold uppercase tracking-widest opacity-50">
+      Current mood
+    </span>
+    <Link
+      href={`https://www.imood.com/finder?m=${encodeURIComponent(mood)}&search=do`}
+      external
+      class="truncate text-sm font-semibold text-black dark:text-white"
+    >
+      {mood}
+    </Link>
+  </div>
+</div>
