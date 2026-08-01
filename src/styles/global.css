@@ -62,7 +62,20 @@ article {
 
 article pre {
   @apply border-l-2 border-cyan-400 bg-zinc-100/50 dark:bg-[#0a0a0a] !important;
-  @apply rounded-r-lg;
+  @apply relative rounded-r-lg;
+}
+
+.dark .astro-code,
+.dark .astro-code span {
+  color: var(--shiki-dark) !important;
+  background-color: var(--shiki-dark-bg) !important;
+  font-style: var(--shiki-dark-font-style) !important;
+  font-weight: var(--shiki-dark-font-weight) !important;
+  text-decoration: var(--shiki-dark-text-decoration) !important;
+}
+
+.copy-code {
+  @apply absolute right-3 top-2 rounded border border-zinc-300 bg-zinc-100 px-2 py-0.5 font-mono text-xs text-zinc-600 transition-colors hover:border-cyan-400 hover:bg-cyan-400 hover:text-black dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-300 dark:hover:border-cyan-400 dark:hover:bg-cyan-400 dark:hover:text-black;
 }
 
 article code {

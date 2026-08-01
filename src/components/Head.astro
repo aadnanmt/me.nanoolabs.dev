@@ -150,6 +150,33 @@ const faviconUrl = "https://cdn.nanoolabs.dev/brands/latest/nanoo.svg"
       })
 
     document.addEventListener("scroll", onScroll)
+    initCopyButtons()
+  }
+
+  function initCopyButtons() {
+    document.querySelectorAll("article pre").forEach((pre) => {
+      if (pre.querySelector(".copy-code")) return
+
+      const button = document.createElement("button")
+      button.type = "button"
+      button.className = "copy-code"
+      button.textContent = "copy"
+
+      button.addEventListener("click", async () => {
+        const code = pre.querySelector("code")
+        if (!code) return
+        try {
+          await navigator.clipboard.writeText(code.textContent ?? "")
+          button.textContent = "copied!"
+          setTimeout(() => (button.textContent = "copy"), 2000)
+        } catch {
+          button.textContent = "failed"
+          setTimeout(() => (button.textContent = "copy"), 2000)
+        }
+      })
+
+      pre.appendChild(button)
+    })
   }
 
   function animate() {

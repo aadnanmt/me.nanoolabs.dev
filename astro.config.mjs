@@ -22,6 +22,14 @@ if (isProd) {
 export default defineConfig({
   site: "https://root.nanoolabs.dev",
   integrations: [mdx(), sitemap(), tailwind()],
+  markdown: {
+    shikiConfig: {
+      themes: {
+        light: "github-light",
+        dark: "github-dark",
+      },
+    },
+  },
   image: {
     service: passthroughImageService(),
   },
