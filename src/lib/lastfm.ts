@@ -60,6 +60,7 @@ export async function getNowPlaying(): Promise<NowPlayingResponse> {
     return cache
   } catch (error) {
     console.error("Error fetching Now Playing from Last.fm:", error)
+    lastFetch = now
     return cache || { track: null, error: "Failed to fetch music data." }
   }
 }
