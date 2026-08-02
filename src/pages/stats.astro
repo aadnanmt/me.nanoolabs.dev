@@ -27,6 +27,8 @@ const response = await fetch(STATS_URL)
 const stats = await response.json()
 const {
   totalCommits,
+  totalFollowers,
+  streak,
   repoCount,
   totalDiskUsage,
   mainLicense,
@@ -100,9 +102,23 @@ function PacmanBar(percentage: number) {
           >
             GitHub Activity
           </h2>
-          <div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
+          <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
             <div class="space-y-1">
-              <div class="text-sm tracking-wider opacity-50">Total Commits</div>
+              <div class="text-sm tracking-wider opacity-50">Followers</div>
+              <div class="font-mono text-2xl font-bold text-cyan-500">
+                {totalFollowers}
+              </div>
+            </div>
+            <div class="space-y-1">
+              <div class="text-sm tracking-wider opacity-50">Commit Streak</div>
+              <div class="font-mono text-2xl font-bold text-cyan-500">
+                {streak} days
+              </div>
+            </div>
+            <div class="space-y-1">
+              <div class="text-sm tracking-wider opacity-50">
+                All-time Commits
+              </div>
               <div class="font-mono text-2xl font-bold text-cyan-500">
                 {totalCommits}
               </div>
