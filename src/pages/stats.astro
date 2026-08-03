@@ -6,6 +6,7 @@ import BackToPrev from "@components/BackToPrev.astro"
 import { IconStats } from "@lib/iconSystem"
 import Link from "@components/Link.astro"
 import NowPlaying from "@components/NowPlaying.astro"
+import ProgressBar from "@components/ProgressBar.astro"
 import { STATS } from "@consts"
 
 // Fetch local collection count
@@ -41,14 +42,6 @@ const diskMB = Math.round(totalDiskUsage / 1024)
 interface Language {
   name: string
   percentage: string
-}
-
-function PacmanBar(percentage: number) {
-  const totalWidth = 20
-  const progress = Math.round((percentage / 100) * totalWidth)
-  const hash = "█".repeat(progress)
-  const dash = "░".repeat(totalWidth - progress)
-  return `[${hash}${dash}] ${percentage.toFixed(1)}%`
 }
 ---
 
@@ -163,9 +156,7 @@ function PacmanBar(percentage: number) {
                       {lang.name}
                     </h3>
                   </div>
-                  <div class="whitespace-pre font-mono text-sm text-cyan-500 sm:text-base">
-                    {PacmanBar(parseFloat(lang.percentage))}
-                  </div>
+                  <ProgressBar percentage={parseFloat(lang.percentage)} />
                 </div>
               ))
             }

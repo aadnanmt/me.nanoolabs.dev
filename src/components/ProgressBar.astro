@@ -5,7 +5,7 @@ interface Props {
 
 const { percentage } = Astro.props
 
-const totalWidth = 20
+const totalWidth = 25
 const progress = Math.round((percentage / 100) * totalWidth)
 const hash = "█".repeat(progress)
 const dash = "░".repeat(totalWidth - progress)
