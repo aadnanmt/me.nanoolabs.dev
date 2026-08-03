@@ -8,6 +8,36 @@ tags: ["niri", "dotfiles", "arch", "wayland"]
 
 Personal dotfiles for Niri (Wayland compositor) on Arch Linux. Cyan theme, minimal, aesthetic.
 
+## Screenshots
+
+<details>
+<summary>Interface & Menus</summary>
+<br>
+<img src="/projects/niri-dotfiles/interface.png" width="800" loading="lazy">
+<br>
+<img src="/projects/niri-dotfiles/menu-apps-wofi.png" width="800" loading="lazy">
+<br>
+<img src="/projects/niri-dotfiles/waybar.png" width="800" loading="lazy">
+<br>
+<img src="/projects/niri-dotfiles/powermenu.png" width="800" loading="lazy">
+<br>
+<img src="/projects/niri-dotfiles/emoji-picker.png" width="800" loading="lazy">
+<br>
+<img src="/projects/niri-dotfiles/wp-select.png" width="800" loading="lazy">
+</details>
+
+<details>
+<summary>TUI & Apps</summary>
+<br>
+<img src="/projects/niri-dotfiles/tui.png" width="800" loading="lazy">
+<br>
+<img src="/projects/niri-dotfiles/dunst.png" width="800" loading="lazy">
+<br>
+<img src="/projects/niri-dotfiles/htop.png" width="800" loading="lazy">
+<br>
+<img src="/projects/niri-dotfiles/yazi.png" width="800" loading="lazy">
+</details>
+
 ## Overview
 
 Niri is a scrollable tiling Wayland compositor. Config live in `~/.config/niri/`.
