@@ -4,6 +4,7 @@ description: "Automated GitHub Profile README synchronizer."
 date: "2026-04-08"
 demoURL: "https://github.com/aadnanmt/aadnanmt"
 repoURL: "https://github.com/aadnanmt/readmeSync"
+tags: ["github", "readme", "automation", "bun"]
 ---
 
 A minimalist tool to synchronize your GitHub Profile README. Built with **Bun** and **TypeScript**, it uses the **GitHub GraphQL API** for fast data fetching and headless templating.
@@ -25,22 +26,16 @@ This project follows a **Headless Templating** approach:
 - **Automation**: GitHub Actions (Cron)
 - **Formatting**: Prettier
 
-## Setup & Usage
+## Quick Start
 
-1. Clone this repository.
-2. Install dependencies:
-   ```bash
-   bun install
-   ```
-3. Initialize the environment file:
-   ```bash
-   bun run setup
-   ```
-4. Set up your `GH_TOKEN` in the `.env` file (see the **Authentication** section below).
-5. Run the generator:
-   ```bash
-   bun start <path-to-target-readme>
-   ```
+```bash
+git clone https://github.com/aadnanmt/readmeSync.git
+cd readmeSync
+bun install
+bun run setup
+# Set GH_TOKEN in .env
+bun start <path-to-target-readme>
+```
 
 ## Authentication
 
