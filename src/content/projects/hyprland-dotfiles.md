@@ -4,6 +4,7 @@ description: "Custom Hyprland setup with a Cyan color style for Arch Linux."
 date: "2026-04-25"
 demoURL: "https://github.com/aadnanmt/hyprland-dotfiles"
 repoURL: "https://github.com/aadnanmt/hyprland-dotfiles"
+tags: ["hyprland", "dotfiles", "arch", "wayland"]
 ---
 
 This page shows my personal config files (dotfiles) for Arch Linux. It has a custom Hyprland setup with a clear **Cyan Color** style.
@@ -134,9 +135,14 @@ Here are the shortcuts in `hypr/conf/keybindings.conf`:
 - `Brightness Up/Down`: Screen Brightness
 - `Media Play/Pause/Next/Prev`: Player Control
 
-## Usage
+## Quick Start
 
-Put these files in `~/.config/`.
+```bash
+git clone https://github.com/aadnanmt/hyprland-dotfiles.git
+cd hyprland-dotfiles
+cp -r .config/* ~/.config/
+hyprctl reload
+```
 
 - To use changes in Hyprland, reload it (use `hyprctl reload` or save the file).
 - To reload Waybar, use `waybar/reload.sh` script.
