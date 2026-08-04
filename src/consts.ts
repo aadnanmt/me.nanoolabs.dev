@@ -58,6 +58,11 @@ export const CREDITS: Metadata = {
   DESCRIPTION: "The tools and technologies that power this website.",
 }
 
+export const KEYS: Metadata = {
+  TITLE: "Public Keys",
+  DESCRIPTION: "Public keys for encryption and signing.",
+}
+
 export const COMMANDS: Metadata = {
   TITLE: "Linux Commands",
   DESCRIPTION: "A collection of Linux commands and hacks that I use.",

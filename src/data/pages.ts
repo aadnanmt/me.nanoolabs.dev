@@ -36,6 +36,11 @@ export const EXPLORE_PAGES: ExplorePage[] = [
     href: "/credits",
     desc: "Tools and people that made this site possible.",
   },
+  {
+    name: "Keys",
+    href: "/keys",
+    desc: "My public keys for encryption and signing.",
+  },
 ]
 
 export const MAIN_PAGES: ExplorePage[] = [
