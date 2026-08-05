@@ -80,23 +80,23 @@ config/
 
 ## Keybinds
 
-| Key | Action |
-|-----|--------|
-| Mod + Return | Kitty |
-| Mod + D | wofi launcher |
-| Mod + N | Kitty nvim |
-| Mod + Q | Close window |
-| Mod + F | Maximize column |
-| Mod + V | Toggle floating |
-| Mod + O | Toggle overview |
-| Mod + 1-9 | Switch workspace |
-| Mod + Shift + 1-9 | Move to workspace |
-| Mod + P | Powermenu |
-| Mod + . | Expel window from column |
-| Mod + Space | Consume column |
-| Mod + Shift + W | Random wallpaper |
-| Mod + Shift + E | Emoji picker |
-| Super + Shift + L | Lock screen |
+| Key               | Action                   |
+| ----------------- | ------------------------ |
+| Mod + Return      | Kitty                    |
+| Mod + D           | wofi launcher            |
+| Mod + N           | Kitty nvim               |
+| Mod + Q           | Close window             |
+| Mod + F           | Maximize column          |
+| Mod + V           | Toggle floating          |
+| Mod + O           | Toggle overview          |
+| Mod + 1-9         | Switch workspace         |
+| Mod + Shift + 1-9 | Move to workspace        |
+| Mod + P           | Powermenu                |
+| Mod + .           | Expel window from column |
+| Mod + Space       | Consume column           |
+| Mod + Shift + W   | Random wallpaper         |
+| Mod + Shift + E   | Emoji picker             |
+| Super + Shift + L | Lock screen              |
 
 ## Credits
 
