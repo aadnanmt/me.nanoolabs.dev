@@ -32,6 +32,7 @@ const projects = defineCollection({
     demoURL: z.string().optional(),
     repoURL: z.string().optional(),
     category: z.enum(["personal", "nanoo"]).optional().default("personal"),
+    tags: z.array(z.string()).optional(),
   }),
 })
 
