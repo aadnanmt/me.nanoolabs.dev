@@ -184,21 +184,21 @@ const ogImage = `/content/${collection}/${entry.slug}/cover.webp`
     >
       <p class="text-sm opacity-75">
         This content is licensed under
-        <a
+        <Link
           href="https://creativecommons.org/licenses/by/4.0/"
-          target="_blank"
-          class="underline decoration-cyan-400/50 underline-offset-4 transition-colors hover:text-cyan-400"
+          external
+          class="decoration-cyan-400/50"
         >
           CC BY 4.0
-        </a>.
-        <span class="mx-1 opacity-50">|</span>
-        <a
+        </Link>
+        .<span class="mx-1 opacity-50">|</span>
+        <Link
           href={`${SITE.REPO}/edit/main/src/content/${collection}/${entry.id}`}
-          target="_blank"
-          class="underline decoration-cyan-400/50 underline-offset-4 transition-colors hover:text-cyan-400"
+          external
+          class="decoration-cyan-400/50"
         >
           Edit this page
-        </a>
+        </Link>
       </p>
     </div>
   </Container>
