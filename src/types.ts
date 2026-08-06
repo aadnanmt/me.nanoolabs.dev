@@ -14,11 +14,11 @@ export type Metadata = {
   DESCRIPTION: string
 }
 
-export type Socials = {
+export type Social = {
   NAME: string
   HREF: string
   DESCRIPTION: string
-}[]
+}
 
 export type ExplorePage = {
   name: string

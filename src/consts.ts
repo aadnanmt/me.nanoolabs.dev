@@ -1,4 +1,4 @@
-import type { Site, Metadata, Socials } from "@types"
+import type { Site, Metadata, Social } from "@types"
 
 export const SITE: Site = {
   NAME: "NaN",
@@ -79,7 +79,7 @@ export const FOCUS: Metadata = {
   DESCRIPTION: "Current focus and project progress, Ascii style.",
 }
 
-export const SOCIALS: Socials = [
+export const SOCIALS: Social[] = [
   {
     NAME: "x-twitter",
     HREF: "https://twitter.com/aadnanmt",
