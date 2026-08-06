@@ -1,7 +1,7 @@
 import { defineConfig, passthroughImageService } from "astro/config"
 import mdx from "@astrojs/mdx"
 import sitemap from "@astrojs/sitemap"
-import tailwind from "@astrojs/tailwind"
+import tailwindcss from "@tailwindcss/vite"
 import { execSync } from "child_process"
 
 const isProd = process.env.CF_PAGES === "1"
@@ -21,7 +21,7 @@ if (isProd) {
 
 export default defineConfig({
   site: "https://root.nanoolabs.dev",
-  integrations: [mdx(), sitemap(), tailwind()],
+  integrations: [mdx(), sitemap()],
   markdown: {
     shikiConfig: {
       themes: {
@@ -36,6 +36,7 @@ export default defineConfig({
   output: isProd ? "server" : "static",
   adapter: adapter,
   vite: {
+    plugins: [tailwindcss()],
     define: {
       "import.meta.env.GIT_HASH": JSON.stringify(
         process.env.CF_PAGES_COMMIT_SHA?.substring(0, 7) || gitHash
