@@ -1,5 +1,5 @@
 {
-  "name": "nagarden",
+  "name": "nan",
   "type": "module",
   "scripts": {
     "dev": "astro dev",

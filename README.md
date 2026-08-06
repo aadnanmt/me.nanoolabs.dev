@@ -1,6 +1,6 @@
-# nagarden - My Digital Garden
+# NaN - My Digital Garden
 
-My digital garden. I build it with **Astro 5** and **Tailwind CSS**. I write about my life, my learning journey, and Linux.
+My digital garden. I build it with **Astro 5** and **Tailwind CSS 4**. i write about my life, my learning journey, and linux
 
 ## Live
 
@@ -8,28 +8,31 @@ My digital garden. I build it with **Astro 5** and **Tailwind CSS**. I write abo
 
 ## Features
 
-- **Linux Wiki**: My personal notes for Linux commands.
-- **Digital Garden**: Blog posts, milestones, and lessons learned.
-- **Focus Page**: See my project progress (Arch Linux style).
-- **Uses Page**: Tools and software I use every day.
-- **Now Page**: What I am focusing on right now.
-- **Changelog**: Track every update to this site.
-- **Cool Background**: Twinkling stars and shooting stars.
-- **Last.fm Integration**: Shows what music I am listening to.
-- **Dark Mode**: OLED black and Cyan color.
+- **Linux Wiki**: Personal notes for Linux commands
+- **Digital Garden**: Blog posts, milestones, and lessons learned
+- **Public Keys**: My age, GPG, and SSH public keys
+- **Focus Page**: Project progress, Arch Linux style
+- **Stats Page**: Realtime stat dashboard
+- **Uses Page**: Tools and software I use every day
+- **Now Page**: What I am focusing on right now
+- **RSS**: Combined feed for blog, projects, and milestones
+- **Last.fm Integration**: Shows what music I am listen
+- **imood Integration**: Shows my current mood
+- **Dark Mode**: OLED black and cyan, powered by Nanoo design tokens
 
 ## Tech I Use
 
-- **Astro 5**: The web framework.
-- **Tailwind CSS 3**: For styling.
-- **TypeScript**: For better code.
-- **Cloudflare Pages**: To host the website.
-- **pnpm**: Fast package manager.
-- **MDX**: For writing content.
+- **Astro 5**: The web framework
+- **Tailwind CSS 4**: CSS-first styling via `@theme` tokens
+- **TypeScript**: Strict mode
+- **Cloudflare Pages**: To host website
+- **pnpm 11**: Fast package manager
+- **node 24**: JS Runtime Env everywhere
+- **MDX**: For writing content
 
 ## How to Start
 
-You need **Node.js** and **pnpm** (or **Bun** — Bun can read pnpm lock files).
+you need **Node.js** and **pnpm**
 
 ```bash
 # Get the code
@@ -44,18 +47,19 @@ pnpm dev
 
 ## Commands
 
-| Command                            | What it does             |
-| ---------------------------------- | ------------------------ |
-| `pnpm dev` / `bun run dev`         | Start dev server         |
-| `pnpm build` / `bun run build`     | Check types and build    |
-| `pnpm preview` / `bun run preview` | Preview production build |
-| `pnpm lint` / `bun run lint`       | Check code style         |
-| `pnpm format` / `bun run format`   | Auto-format code         |
+| Command            | What it does             |
+| ------------------ | ------------------------ |
+| `pnpm dev`         | Start dev server         |
+| `pnpm build`       | Check types and build    |
+| `pnpm preview`     | Preview production build |
+| `pnpm lint`        | Check code style         |
+| `pnpm format`      | Auto format code         |
+<!--| `pnpm new`         | Scaffold a content entry |-->
 
 ## License
 
-- **Text & Images**: Licensed under **[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)**.
-- **Code**: Based on [Astro Nano](https://github.com/markhorn-dev/astro-nano).
+- **Text & Images**: Licensed under **[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)**
+- **Code**: Based on [Astro Nano](https://github.com/markhorn-dev/astro-nano)
 
 ---
 
