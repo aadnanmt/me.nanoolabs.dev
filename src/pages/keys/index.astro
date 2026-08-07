@@ -20,7 +20,7 @@ const KEYS_DATA = [
     title: "GPG",
     desc: "Verify my signatures or encrypt messages to me.",
     fingerprint: "3189 8147 4FC8 EB9B 541F E684 D057 A5BA B37D 7F66",
-    usage: `gpg --import <(curl -s ${SITE.URL}/keys/gpg)`,
+    usage: `curl -s ${SITE.URL}/keys/gpg | gpg --import`,
   },
   {
     type: "ssh",
