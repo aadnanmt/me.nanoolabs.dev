@@ -56,6 +56,10 @@ pnpm dev
 | `pnpm format`      | Auto format code         |
 <!--| `pnpm new`         | Scaffold a content entry |-->
 
+## Cloudflare Pages
+
+Build command on CF dashboard: `git fetch --unshallow && pnpm build`. CF clone shallow; without it, "Last updated" date show the build date instead of the real last-edit date.
+
 ## License
 
 - **Text & Images**: Licensed under **[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)**
