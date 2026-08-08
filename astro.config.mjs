@@ -10,7 +10,7 @@ let gitHash = "unknown"
 try {
   gitHash = execSync("git rev-parse --short HEAD").toString().trim()
 } catch (e) {
-  console.warn("Could not get git hash")
+  console.warn(`Could not get git hash: ${e.message}`)
 }
 
 let adapter
