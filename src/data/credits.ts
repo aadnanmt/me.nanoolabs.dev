@@ -26,6 +26,16 @@ export const CREDITS = [
     HREF: "https://vercel.com/font/sans",
   },
   {
+    NAME: "Inter",
+    DESCRIPTION: "Sans-serif typeface used as a fallback for Geist Sans.",
+    HREF: "https://rsms.me/inter/",
+  },
+  {
+    NAME: "JetBrains Mono",
+    DESCRIPTION: "Monospace font for code blocks and terminal aesthetics.",
+    HREF: "https://www.jetbrains.com/lp/mono/",
+  },
+  {
     NAME: "FontAwesome",
     DESCRIPTION: "Source of the brand icons, licensed under CC BY 4.0.",
     HREF: "https://fontawesome.com",
@@ -49,6 +59,11 @@ export const CREDITS = [
     NAME: "Cloudflare Pages",
     DESCRIPTION: "Global edge hosting for this site's builds.",
     HREF: "https://pages.cloudflare.com",
+  },
+  {
+    NAME: "Nanoo Design Tokens",
+    DESCRIPTION: "My own design token system powering all colors.",
+    HREF: "https://github.com/nanoolabs/css",
   },
   {
     NAME: "Prettier",
