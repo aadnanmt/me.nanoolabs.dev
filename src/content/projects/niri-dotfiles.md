@@ -13,29 +13,29 @@ Personal dotfiles for Niri (Wayland compositor) on Arch Linux. Cyan theme, minim
 <details>
 <summary>Interface & Menus</summary>
 <br>
-<img src="/projects/niri-dotfiles/interface.png" loading="lazy">
+<img src="/content/projects/niri-dotfiles/interface.png" loading="lazy">
 <br>
-<img src="/projects/niri-dotfiles/menu-apps-wofi.png" loading="lazy">
+<img src="/content/projects/niri-dotfiles/menu-apps-wofi.png" loading="lazy">
 <br>
-<img src="/projects/niri-dotfiles/waybar.png" loading="lazy">
+<img src="/content/projects/niri-dotfiles/waybar.png" loading="lazy">
 <br>
-<img src="/projects/niri-dotfiles/powermenu.png" loading="lazy">
+<img src="/content/projects/niri-dotfiles/powermenu.png" loading="lazy">
 <br>
-<img src="/projects/niri-dotfiles/emoji-picker.png" loading="lazy">
+<img src="/content/projects/niri-dotfiles/emoji-picker.png" loading="lazy">
 <br>
-<img src="/projects/niri-dotfiles/wp-select.png" loading="lazy">
+<img src="/content/projects/niri-dotfiles/wp-select.png" loading="lazy">
 </details>
 
 <details>
 <summary>TUI & Apps</summary>
 <br>
-<img src="/projects/niri-dotfiles/tui.png" loading="lazy">
+<img src="/content/projects/niri-dotfiles/tui.png" loading="lazy">
 <br>
-<img src="/projects/niri-dotfiles/dunst.png" loading="lazy">
+<img src="/content/projects/niri-dotfiles/dunst.png" loading="lazy">
 <br>
-<img src="/projects/niri-dotfiles/htop.png" loading="lazy">
+<img src="/content/projects/niri-dotfiles/htop.png" loading="lazy">
 <br>
-<img src="/projects/niri-dotfiles/yazi.png" loading="lazy">
+<img src="/content/projects/niri-dotfiles/yazi.png" loading="lazy">
 </details>
 
 ## Overview
