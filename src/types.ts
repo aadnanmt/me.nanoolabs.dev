@@ -18,6 +18,7 @@ export type Social = {
   NAME: string
   HREF: string
   DESCRIPTION: string
+  ACTIVE?: boolean
 }
 
 export type ExplorePage = {

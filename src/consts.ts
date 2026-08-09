@@ -43,7 +43,7 @@ export const EXPLORE: Metadata = {
 }
 
 export const CONTACT: Metadata = {
-  TITLE: "Contact",
+  TITLE: "Connect",
   DESCRIPTION: "Get in touch with me",
 }
 
@@ -89,11 +89,13 @@ export const SOCIALS: Social[] = [
     NAME: "github",
     HREF: "https://github.com/aadnanmt",
     DESCRIPTION: "Where I store my code and experiments.",
+    ACTIVE: true,
   },
   {
     NAME: "codeberg",
     HREF: "https://codeberg.org/aadnanmt",
     DESCRIPTION: "Primary forge and backup for my code and projects.",
+    ACTIVE: true,
   },
   {
     NAME: "telegram",
@@ -109,6 +111,11 @@ export const SOCIALS: Social[] = [
     NAME: "instagram",
     HREF: "https://www.instagram.com/aadnanmt",
     DESCRIPTION: "Personal bits and visual logs.",
+  },
+  {
+    NAME: "spotify",
+    HREF: "https://open.spotify.com/user/314bjvthnpohaain54tchezpc4ji",
+    DESCRIPTION: "My playlists and what I am listening to.",
   },
   {
     NAME: "ko-fi",

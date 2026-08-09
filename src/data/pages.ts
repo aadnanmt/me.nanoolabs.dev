@@ -51,8 +51,8 @@ export const MAIN_PAGES: ExplorePage[] = [
     desc: "My thoughts, tutorials, and technical articles.",
   },
   {
-    name: "Contact",
-    href: "/contact",
+    name: "Connect",
+    href: "/connect",
     desc: "Get in touch with me for collaboration or chats.",
   },
   {
