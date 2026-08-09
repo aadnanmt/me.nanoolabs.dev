@@ -18,7 +18,7 @@ Here are my steps to purchase a domain through Hostinger.
 
 ![Step 2](/content/blog/buy-domain-on-hostinger/step2.webp)
 
-> okeyy, total balace that i spent was 261.086 rupiah (include tax  and cont for ICANN
+> okeyy, total balace that i spent was 261.086 rupiah (include tax and cont for ICANN
 
 ![Step 3](/content/blog/buy-domain-on-hostinger/step3.webp)
 
@@ -114,6 +114,6 @@ Here are my steps to purchase a domain through Hostinger.
 
 ![Step 27](/content/blog/buy-domain-on-hostinger/step27.webp)
 
-> i  checking information domain nanoolabs.dev on whois. done
+> i checking information domain nanoolabs.dev on whois. done
 
 ![Step 28](/content/blog/buy-domain-on-hostinger/step28.webp)

@@ -47,13 +47,14 @@ pnpm dev
 
 ## Commands
 
-| Command            | What it does             |
-| ------------------ | ------------------------ |
-| `pnpm dev`         | Start dev server         |
-| `pnpm build`       | Check types and build    |
-| `pnpm preview`     | Preview production build |
-| `pnpm lint`        | Check code style         |
-| `pnpm format`      | Auto format code         |
+| Command        | What it does             |
+| -------------- | ------------------------ |
+| `pnpm dev`     | Start dev server         |
+| `pnpm build`   | Check types and build    |
+| `pnpm preview` | Preview production build |
+| `pnpm lint`    | Check code style         |
+| `pnpm format`  | Auto format code         |
+
 <!--| `pnpm new`         | Scaffold a content entry |-->
 
 ## Cloudflare Pages

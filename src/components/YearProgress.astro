@@ -11,7 +11,7 @@ const totalBlocks = 25
 
 <div class="space-y-2">
   <div class="flex items-end justify-between font-mono">
-    <span class="text-sm font-semibold uppercase tracking-widest opacity-70">
+    <span class="text-sm font-semibold tracking-widest uppercase opacity-70">
       {now.getFullYear()} Progress
     </span>
     <span class="text-sm font-bold text-cyan-500">
@@ -26,9 +26,7 @@ const totalBlocks = 25
         return (
           <div
             class={`h-4 flex-1 transition-colors duration-500 ${
-              isFilled
-                ? "bg-cyan-500"
-                : "bg-black/10 dark:bg-white/10"
+              isFilled ? "bg-cyan-500" : "bg-black/10 dark:bg-white/10"
             }`}
           />
         )
@@ -37,7 +35,7 @@ const totalBlocks = 25
   </div>
 
   <div
-    class="flex justify-between font-mono text-[13px] uppercase tracking-tighter opacity-40 md:text-[14px]"
+    class="flex justify-between font-mono text-[13px] tracking-tighter uppercase opacity-40 md:text-[14px]"
   >
     <span>Jan 01</span>
     <span>Dec 31</span>

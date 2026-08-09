@@ -28,7 +28,7 @@ const updatedText = updated
     {emoji}
   </div>
   <div class="flex flex-col gap-0.5 overflow-hidden">
-    <span class="text-xs font-semibold uppercase tracking-widest opacity-50">
+    <span class="text-xs font-semibold tracking-widest uppercase opacity-50">
       Current mood{updatedText}
     </span>
     <Link
@@ -38,6 +38,6 @@ const updatedText = updated
     >
       {mood}
     </Link>
-    {content && <span class="break-words text-xs opacity-60">{content}</span>}
+    {content && <span class="text-xs break-words opacity-60">{content}</span>}
   </div>
 </div>
