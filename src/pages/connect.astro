@@ -5,40 +5,7 @@ import BackToPrev from "@components/BackToPrev.astro"
 import Link from "@components/Link.astro"
 import TimeStatus from "@components/TimeStatus.astro"
 import { SITE, SOCIALS, CONTACT } from "@consts"
-import {
-  IconEmail,
-  IconGithub,
-  IconX,
-  IconTelegram,
-  IconInstagram,
-  IconKofi,
-  IconCodeberg,
-  IconDiscord,
-  IconSpotify,
-} from "@lib/iconSystem"
-
-const getIcon = (name: string) => {
-  switch (name.toLowerCase()) {
-    case "github":
-      return IconGithub
-    case "x-twitter":
-      return IconX
-    case "telegram":
-      return IconTelegram
-    case "instagram":
-      return IconInstagram
-    case "ko-fi":
-      return IconKofi
-    case "codeberg":
-      return IconCodeberg
-    case "discord":
-      return IconDiscord
-    case "spotify":
-      return IconSpotify
-    default:
-      return IconEmail
-  }
-}
+import { getIcon, IconEmail } from "@lib/iconSystem"
 ---
 
 <PageLayout title={CONTACT.TITLE} description={CONTACT.DESCRIPTION}>
@@ -69,7 +36,7 @@ const getIcon = (name: string) => {
             email is the most reliable way to reach me.
           </p>
           <div class="flex items-center gap-2">
-            <div class="size-4 fill-zinc-500">
+            <div class="size-4 fill-zinc-500 text-zinc-500">
               <Fragment set:html={IconEmail} />
             </div>
             <Link href={`mailto:${SITE.EMAIL}`} external>
@@ -92,7 +59,7 @@ const getIcon = (name: string) => {
               SOCIALS.map((SOCIAL) => (
                 <li class="group flex flex-col gap-1 border-l-2 border-zinc-200 pl-4 dark:border-zinc-800">
                   <div class="flex items-center gap-2">
-                    <div class="size-4 fill-zinc-500">
+                    <div class="size-4 fill-zinc-500 text-zinc-500">
                       <Fragment set:html={getIcon(SOCIAL.NAME)} />
                     </div>
                     <Link
@@ -134,8 +101,8 @@ const getIcon = (name: string) => {
                 >Fiat / Traditional</span
               >
               <div class="flex items-center gap-2">
-                <div class="size-4 fill-zinc-500">
-                  <Fragment set:html={IconKofi} />
+                <div class="size-4 fill-zinc-500 text-zinc-500">
+                  <Fragment set:html={getIcon("ko-fi")} />
                 </div>
                 <Link
                   href="https://ko-fi.com/aadnanmt"

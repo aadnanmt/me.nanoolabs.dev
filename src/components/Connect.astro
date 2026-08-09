@@ -1,12 +1,14 @@
 ---
 import { SITE, SOCIALS } from "@consts"
 import Link from "@components/Link.astro"
-import { IconSend } from "@lib/iconSystem"
+import { IconSend, IconEmail, getIcon } from "@lib/iconSystem"
 ---
 
 <section class="animate space-y-4">
   <h5 class="flex items-center gap-2 font-semibold text-black dark:text-white">
-    <span class="size-5 fill-zinc-500"><Fragment set:html={IconSend} /></span>
+    <span class="size-5 fill-zinc-500 text-zinc-500"
+      ><Fragment set:html={IconSend} /></span
+    >
     Let's Connect
   </h5>
   <article>
@@ -16,9 +18,24 @@ import { IconSend } from "@lib/iconSystem"
     </p>
   </article>
   <ul class="flex flex-wrap gap-2">
+    <li class="line-clamp-1 flex items-center gap-x-2">
+      <span class="size-4 fill-zinc-500 text-zinc-500">
+        <Fragment set:html={IconEmail} />
+      </span>
+      <Link
+        href={`mailto:${SITE.EMAIL}`}
+        aria-label={`Email ${SITE.NAME} at ${SITE.EMAIL}`}
+      >
+        Email
+      </Link>
+      {"/"}
+    </li>
     {
-      SOCIALS.map((SOCIAL) => (
-        <li class="flex gap-x-2 text-nowrap">
+      SOCIALS.filter((SOCIAL) => SOCIAL.ACTIVE).map((SOCIAL) => (
+        <li class="flex items-center gap-x-2 text-nowrap">
+          <span class="size-4 fill-zinc-500 text-zinc-500">
+            <Fragment set:html={getIcon(SOCIAL.NAME)} />
+          </span>
           <Link
             href={SOCIAL.HREF}
             external
@@ -30,10 +47,5 @@ import { IconSend } from "@lib/iconSystem"
         </li>
       ))
     }
-    <li class="line-clamp-1">
-      <Link href={`mailto:${SITE.EMAIL}`} aria-label={`Email ${SITE.NAME}`}>
-        {SITE.EMAIL}
-      </Link>
-    </li>
   </ul>
 </section>
