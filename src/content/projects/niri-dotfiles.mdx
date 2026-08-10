@@ -6,37 +6,39 @@ repoURL: "https://github.com/aadnanmt/niri-dotfiles"
 tags: ["niri", "dotfiles", "arch", "wayland"]
 ---
 
+import Details from "@components/Details.astro"
+
 Personal dotfiles for Niri (Wayland compositor) on Arch Linux. Cyan theme, minimal, aesthetic.
 
 ## Screenshots
 
-<details>
-<summary>Interface & Menus</summary>
-<br>
-<img src="/content/projects/niri-dotfiles/interface.png" loading="lazy">
-<br>
-<img src="/content/projects/niri-dotfiles/menu-apps-wofi.png" loading="lazy">
-<br>
-<img src="/content/projects/niri-dotfiles/waybar.png" loading="lazy">
-<br>
-<img src="/content/projects/niri-dotfiles/powermenu.png" loading="lazy">
-<br>
-<img src="/content/projects/niri-dotfiles/emoji-picker.png" loading="lazy">
-<br>
-<img src="/content/projects/niri-dotfiles/wp-select.png" loading="lazy">
-</details>
+<Details label="Interface & Menus">
 
-<details>
-<summary>TUI & Apps</summary>
-<br>
-<img src="/content/projects/niri-dotfiles/tui.png" loading="lazy">
-<br>
-<img src="/content/projects/niri-dotfiles/dunst.png" loading="lazy">
-<br>
-<img src="/content/projects/niri-dotfiles/htop.png" loading="lazy">
-<br>
-<img src="/content/projects/niri-dotfiles/yazi.png" loading="lazy">
-</details>
+![interface](/content/projects/niri-dotfiles/interface.png)
+
+![menu-apps-wofi](/content/projects/niri-dotfiles/menu-apps-wofi.png)
+
+![waybar](/content/projects/niri-dotfiles/waybar.png)
+
+![powermenu](/content/projects/niri-dotfiles/powermenu.png)
+
+![emoji-picker](/content/projects/niri-dotfiles/emoji-picker.png)
+
+![wp-select](/content/projects/niri-dotfiles/wp-select.png)
+
+</Details>
+
+<Details label="TUI & Apps">
+
+![tui](/content/projects/niri-dotfiles/tui.png)
+
+![dunst](/content/projects/niri-dotfiles/dunst.png)
+
+![htop](/content/projects/niri-dotfiles/htop.png)
+
+![yazi](/content/projects/niri-dotfiles/yazi.png)
+
+</Details>
 
 ## Overview
 
@@ -59,7 +61,7 @@ Niri is a scrollable tiling Wayland compositor. Config live in `~/.config/niri/`
 ```bash
 git clone https://github.com/aadnanmt/niri-dotfiles.git
 cd niri-dotfiles
-cp -r .config/* ~/.config/
+cp -r config/* ~/.config/
 ```
 
 ## Directory Structure
