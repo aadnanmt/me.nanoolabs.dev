@@ -13,7 +13,7 @@ git log --grep="variables" --oneline
 ```
 
 _Only commits whose message match the word:_
-<img src="/content/commands/git-log-search/git-log-grep.png" alt="Git Log Grep"/>
+![Git Log Grep](/content/commands/git-log-search/git-log-grep.png)
 
 ### By code change
 
@@ -25,7 +25,7 @@ git log -S "variables" --oneline -- src/
 - `-- src/` : limit to a path
 
 _Find the commit that introduce or remove the code:_
-<img src="/content/commands/git-log-search/git-log-pickaxe.png" alt="Git Log Pickaxe"/>
+![Git Log Pickaxe](/content/commands/git-log-search/git-log-pickaxe.png)
 
 add `-p` to see the diff too.
 

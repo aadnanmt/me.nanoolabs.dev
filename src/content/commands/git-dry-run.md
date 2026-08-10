@@ -13,7 +13,7 @@ git push --dry-run
 ```
 
 You know what will happen before you push your local commit. Example:
-<img src="/content/commands/git-dry-run/git-push-dry-run.png" alt="Git Push Dry Run"/>
+![Git Push Dry Run](/content/commands/git-dry-run/git-push-dry-run.png)
 
 The dry-run output shows exactly what a real push would transfer, but no objects are sent:
 
