@@ -23,17 +23,17 @@ function formatTimeAgo(timestamp?: number) {
 ---
 
 <div
-  class="flex items-center gap-4 rounded-lg border border-black/10 p-4 dark:border-white/10"
+  class="flex items-center gap-4 border border-black/10 p-4 dark:border-white/10"
 >
   <div
-    class="relative flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-md bg-black/5 dark:bg-white/5"
+    class="relative flex h-12 w-12 flex-shrink-0 items-center justify-center bg-black/5 dark:bg-white/5"
   >
     {
       track.image ? (
         <img
           src={track.image}
           alt={track.artist}
-          class="h-full w-full rounded-md object-cover"
+          class="h-full w-full object-cover"
         />
       ) : (
         <div class="flex h-full w-full items-center justify-center text-black/50 dark:text-white/50">
@@ -44,8 +44,8 @@ function formatTimeAgo(timestamp?: number) {
     {
       track.nowPlaying && (
         <span class="absolute -top-1 -right-1 flex h-3 w-3">
-          <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-400 opacity-75" />
-          <span class="relative inline-flex h-3 w-3 rounded-full bg-cyan-500" />
+          <span class="absolute inline-flex h-full w-full animate-ping bg-cyan-400 opacity-75" />
+          <span class="relative inline-flex h-3 w-3 bg-cyan-500" />
         </span>
       )
     }
