@@ -20,7 +20,7 @@ const description = COMMANDS.DESCRIPTION
     <div class="space-y-10">
       <BackToPrev href="/explore"> Back to explore </BackToPrev>
       <div
-        class="animate flex items-center gap-2 font-semibold text-black dark:text-white"
+        class="flex items-center gap-2 font-semibold text-black dark:text-white"
       >
         <div class="size-5 fill-current">
           <Fragment set:html={IconCommands} />
@@ -28,7 +28,7 @@ const description = COMMANDS.DESCRIPTION
         Commands
       </div>
       <div class="space-y-4">
-        <p class="animate">
+        <p>
           This is my personal wiki for Linux commands. No fluff, just pure
           functionality and specific use cases that i've tested myself.
         </p>
@@ -37,7 +37,7 @@ const description = COMMANDS.DESCRIPTION
         <ul class="flex flex-col gap-4">
           {
             commands.map((command) => (
-              <li class="animate">
+              <li>
                 <ArrowCard entry={command} />
               </li>
             ))

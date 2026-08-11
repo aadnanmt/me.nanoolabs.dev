@@ -153,14 +153,6 @@ article :not(pre) > code {
   }
 }
 
-.animate {
-  @apply translate-y-0 opacity-100;
-}
-
-.animate.show {
-  @apply translate-y-0 opacity-100;
-}
-
 html #back-to-top {
   @apply pointer-events-none opacity-0;
 }

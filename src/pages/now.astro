@@ -31,32 +31,32 @@ const lastUpdated = gitDate(`now/${latestEntry.id}`)
 
       <div class="space-y-2">
         <div
-          class="animate flex items-center gap-2 font-semibold text-black dark:text-white"
+          class="flex items-center gap-2 font-semibold text-black dark:text-white"
         >
           <div class="size-5 fill-current">
             <Fragment set:html={IconNow} />
           </div>
           Now
         </div>
-        <div class="animate text-sm italic opacity-60">
+        <div class="text-sm italic opacity-60">
           Last synced with Git: <FormattedDate
             date={lastUpdated || latestEntry.data.date}
           />
         </div>
       </div>
 
-      <article class="animate prose prose-neutral dark:prose-invert max-w-none">
+      <article class="prose prose-neutral dark:prose-invert max-w-none">
         <Content />
       </article>
 
-      <div class="animate space-y-4 py-8">
+      <div class="space-y-4 py-8">
         <Mood />
         <NowPlaying />
       </div>
 
       {
         history.length > 0 && (
-          <div class="animate space-y-4 border-t border-black/10 pt-10 dark:border-white/10">
+          <div class="space-y-4 border-t border-black/10 pt-10 dark:border-white/10">
             <h2 class="text-xl font-semibold text-black dark:text-white">
               Previous Updates
             </h2>

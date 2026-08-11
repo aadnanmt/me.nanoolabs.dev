@@ -22,7 +22,7 @@ const personalProjects = allProjects.filter(
     <div class="space-y-10">
       <BackToPrev> Back to home </BackToPrev>
       <div
-        class="animate flex items-center gap-2 font-semibold text-black dark:text-white"
+        class="flex items-center gap-2 font-semibold text-black dark:text-white"
       >
         <div class="size-5 fill-current">
           <Fragment set:html={IconProjects} />
@@ -32,10 +32,10 @@ const personalProjects = allProjects.filter(
       {
         nanooProjects.length > 0 && (
           <>
-            <h3 class="animate mt-12 font-semibold text-black dark:text-white">
+            <h3 class="mt-12 font-semibold text-black dark:text-white">
               Nanoo
             </h3>
-            <ul class="animate flex flex-col gap-4">
+            <ul class="flex flex-col gap-4">
               {nanooProjects.map((project) => (
                 <li>
                   <ArrowCard entry={project} />
@@ -45,10 +45,8 @@ const personalProjects = allProjects.filter(
           </>
         )
       }
-      <h3 class="animate mt-12 font-semibold text-black dark:text-white">
-        Personal
-      </h3>
-      <ul class="animate flex flex-col gap-4">
+      <h3 class="mt-12 font-semibold text-black dark:text-white">Personal</h3>
+      <ul class="flex flex-col gap-4">
         {
           personalProjects.map((project) => (
             <li>

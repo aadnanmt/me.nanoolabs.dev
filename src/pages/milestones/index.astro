@@ -19,7 +19,7 @@ const description = MILESTONES.DESCRIPTION
     <div class="space-y-10">
       <BackToPrev href="/explore"> Back to explore </BackToPrev>
       <div
-        class="animate flex items-center gap-2 font-semibold text-black dark:text-white"
+        class="flex items-center gap-2 font-semibold text-black dark:text-white"
       >
         <div class="size-5 fill-current">
           <Fragment set:html={IconMilestones} />
@@ -27,7 +27,7 @@ const description = MILESTONES.DESCRIPTION
         Milestones
       </div>
       <div class="space-y-4">
-        <p class="animate">
+        <p>
           This is my honest journey of personal growth, tech explorations, and
           life lessons. It's a record of how I'm trying to figure things out,
           one step at a time.
@@ -37,7 +37,7 @@ const description = MILESTONES.DESCRIPTION
         <ul class="flex flex-col gap-4">
           {
             milestones.map((milestone) => (
-              <li class="animate">
+              <li>
                 <ArrowCard entry={milestone} />
               </li>
             ))

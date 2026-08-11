@@ -115,7 +115,6 @@ const faviconUrl = `${SITE.CDN}/brands/latest/nanoo.svg`
   function init() {
     preloadTheme()
     onScroll()
-    animate()
 
     const backToTop = document.getElementById("back-to-top")
     backToTop?.addEventListener("click", (event) => scrollToTop(event))
@@ -181,16 +180,6 @@ const faviconUrl = `${SITE.CDN}/brands/latest/nanoo.svg`
       })
 
       wrapper.appendChild(button)
-    })
-  }
-
-  function animate() {
-    const animateElements = document.querySelectorAll(".animate")
-
-    animateElements.forEach((element, index) => {
-      setTimeout(() => {
-        element.classList.add("show")
-      }, index * 150)
     })
   }
 

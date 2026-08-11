@@ -38,7 +38,7 @@ const KEYS_DATA = [
       <BackToPrev href="/explore"> Back to explore </BackToPrev>
 
       <div
-        class="animate flex items-center gap-2 font-semibold text-black dark:text-white"
+        class="flex items-center gap-2 font-semibold text-black dark:text-white"
       >
         <div class="size-5 fill-current">
           <Fragment set:html={IconCommands} />
@@ -46,19 +46,19 @@ const KEYS_DATA = [
         Public Keys
       </div>
 
-      <p class="animate">
+      <p>
         Public keys for encryption and signing. Fetch each raw key with curl, or
         view it below.
       </p>
 
       <div
-        class="animate rounded-lg border border-amber-400/30 bg-amber-400/5 p-4 text-sm text-amber-700 dark:text-amber-300"
+        class="rounded-lg border border-amber-400/30 bg-amber-400/5 p-4 text-sm text-amber-700 dark:text-amber-300"
       >
         Verify the key fingerprint before trusting it. Don&apos;t blindly pipe
         curl output into your shell.
       </div>
 
-      <div class="animate space-y-12">
+      <div class="space-y-12">
         {
           KEYS_DATA.map((key) => (
             <section class="space-y-4">
