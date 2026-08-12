@@ -9,12 +9,9 @@ import BackToPrev from "@components/BackToPrev.astro"
 const milestones = (await getCollection("milestones")).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf() // Sort by date descending
 )
-
-const title = MILESTONES.TITLE
-const description = MILESTONES.DESCRIPTION
 ---
 
-<PageLayout title={title} description={description}>
+<PageLayout title={MILESTONES.TITLE} description={MILESTONES.DESCRIPTION}>
   <Container>
     <div class="space-y-10">
       <BackToPrev href="/explore"> Back to explore </BackToPrev>
@@ -27,11 +24,7 @@ const description = MILESTONES.DESCRIPTION
         Milestones
       </div>
       <div class="space-y-4">
-        <p>
-          This is my honest journey of personal growth, tech explorations, and
-          life lessons. It's a record of how I'm trying to figure things out,
-          one step at a time.
-        </p>
+        {MILESTONES.INTRO!.map((paragraph) => <p>{paragraph}</p>)}
       </div>
       <div class="space-y-4">
         <ul class="flex flex-col gap-3">

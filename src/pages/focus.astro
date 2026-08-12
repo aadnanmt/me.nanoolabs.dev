@@ -23,10 +23,7 @@ import { MYFOCUS } from "@data/focus"
         Focus
       </div>
 
-      <p>
-        This page shows what I'm currently working or learning on and the
-        progress of each task, sync anytime.
-      </p>
+      {FOCUS.INTRO!.map((paragraph) => <p>{paragraph}</p>)}
 
       <div>
         <YearProgress />

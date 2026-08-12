@@ -39,6 +39,7 @@ const years = Object.keys(posts).sort((a, b) => parseInt(b) - parseInt(a))
         </div>
         Blog
       </div>
+      {BLOG.INTRO!.map((paragraph) => <p>{paragraph}</p>)}
       <div class="space-y-4">
         {
           years.map((year) => (

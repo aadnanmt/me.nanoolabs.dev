@@ -10,12 +10,9 @@ import BackToPrev from "@components/BackToPrev.astro"
 const commands = (await getCollection("commands")).sort((a, b) =>
   a.data.title.localeCompare(b.data.title)
 )
-
-const title = COMMANDS.TITLE
-const description = COMMANDS.DESCRIPTION
 ---
 
-<PageLayout title={title} description={description}>
+<PageLayout title={COMMANDS.TITLE} description={COMMANDS.DESCRIPTION}>
   <Container>
     <div class="space-y-10">
       <BackToPrev href="/explore"> Back to explore </BackToPrev>
@@ -28,10 +25,7 @@ const description = COMMANDS.DESCRIPTION
         Commands
       </div>
       <div class="space-y-4">
-        <p>
-          This is my personal wiki for Linux commands. No fluff, just pure
-          functionality and specific use cases that i've tested myself.
-        </p>
+        {COMMANDS.INTRO!.map((paragraph) => <p>{paragraph}</p>)}
       </div>
       <div class="space-y-4">
         <ul class="flex flex-col gap-3">

@@ -59,10 +59,7 @@ interface Language {
         Statistics
       </div>
 
-      <p>
-        Content count in this digital garden, GitHub activity across all repos,
-        and language breakdown from my open-source contributions.
-      </p>
+      {STATS.INTRO!.map((paragraph) => <p>{paragraph}</p>)}
 
       <div class="space-y-12">
         <!-- Garden Metrics Section -->

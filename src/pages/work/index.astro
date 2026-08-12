@@ -34,6 +34,7 @@ const work = await Promise.all(
         </div>
         Works
       </div>
+      {WORK.INTRO!.map((paragraph) => <p>{paragraph}</p>)}
       <ul class="flex flex-col space-y-4">
         {
           work.map((entry) => (

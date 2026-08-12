@@ -20,10 +20,7 @@ import { CREDITS } from "@data/credits"
         </div>
         Credits
       </div>
-      <p>
-        This project is made possible by the incredible open-source community
-        and the following technologies:
-      </p>
+      {CREDITS_META.INTRO!.map((paragraph) => <p>{paragraph}</p>)}
       <ul class="flex flex-col space-y-8">
         {
           CREDITS.map((credit) => (
