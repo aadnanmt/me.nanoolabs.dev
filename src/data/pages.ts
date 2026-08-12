@@ -4,7 +4,7 @@ export const EXPLORE_PAGES: ExplorePage[] = [
   {
     name: "Commands",
     href: "/commands",
-    desc: "My personal Linux command wiki and hacks.",
+    desc: "My personal command wiki and hacks.",
   },
   {
     name: "Now",
@@ -30,11 +30,6 @@ export const EXPLORE_PAGES: ExplorePage[] = [
     name: "Focus",
     href: "/focus",
     desc: "What I'm currently working on and its progress.",
-  },
-  {
-    name: "Credits",
-    href: "/credits",
-    desc: "Tools and people that made this site possible.",
   },
   {
     name: "Keys",
