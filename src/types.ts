@@ -11,6 +11,7 @@ export type Site = {
 export type Metadata = {
   TITLE: string
   DESCRIPTION: string
+  INTRO?: string[]
 }
 
 export type Social = {

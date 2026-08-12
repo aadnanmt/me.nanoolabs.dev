@@ -18,17 +18,24 @@ export const HOME: Metadata = {
 export const BLOG: Metadata = {
   TITLE: "Blog",
   DESCRIPTION: "A collection of my articles",
+  INTRO: [
+    "A collection of my articles, deep dives, lessons learned, and everything in between on this journey.",
+  ],
 }
 
 export const WORK: Metadata = {
   TITLE: "Work",
   DESCRIPTION: "Where I have worked and what I have done.",
+  INTRO: [
+    "Where I have worked and what I have done, the roles and the lessons.",
+  ],
 }
 
 export const PROJECTS: Metadata = {
   TITLE: "Projects",
   DESCRIPTION:
     "A collection of my projects, with links to repositories and demos.",
+  INTRO: ["A collection of my projects with repositories and demos."],
 }
 
 export const NOTFOUND: Metadata = {
@@ -39,6 +46,9 @@ export const NOTFOUND: Metadata = {
 export const EXPLORE: Metadata = {
   TITLE: "Explore",
   DESCRIPTION: "Explore all pages on this site.",
+  INTRO: [
+    "Use the links below to navigate through the different sections of this site.",
+  ],
 }
 
 export const CONTACT: Metadata = {
@@ -50,32 +60,50 @@ export const STATS: Metadata = {
   TITLE: "Statistics",
   DESCRIPTION:
     "Content count in this digital garden, GitHub activity, and language breakdown from my open-source contributions.",
+  INTRO: [
+    "Content count in this digital garden, GitHub activity across all repos, and language breakdown from my open-source contributions.",
+  ],
 }
 
 export const CREDITS: Metadata = {
   TITLE: "Credits",
   DESCRIPTION: "The tools and technologies that power this website.",
+  INTRO: [
+    "This project is made possible by the incredible open-source community and the following technologies:",
+  ],
 }
 
 export const KEYS: Metadata = {
   TITLE: "Public Keys",
   DESCRIPTION: "Public keys for encryption and signing.",
+  INTRO: [
+    "Public keys for encryption and signing. Fetch each raw key with curl, or view it below.",
+  ],
 }
 
 export const COMMANDS: Metadata = {
-  TITLE: "Linux Commands",
-  DESCRIPTION: "A collection of Linux commands and hacks that I use.",
+  TITLE: "Commands",
+  DESCRIPTION: "A collection of commands and hacks that I use.",
+  INTRO: [
+    "This is my personal command wiki. No fluff, just pure functionality and specific use cases that i've tested myself.",
+  ],
 }
 
 export const MILESTONES: Metadata = {
   TITLE: "My Milestones",
   DESCRIPTION:
     "Documenting my personal growth, reflections, and lessons learned on this journey.",
+  INTRO: [
+    "This is my honest journey of personal growth, tech explorations, and life lessons. It's a record of how I'm trying to figure things out, one step at a time.",
+  ],
 }
 
 export const FOCUS: Metadata = {
   TITLE: "Focus",
   DESCRIPTION: "Current focus and project progress, Ascii style.",
+  INTRO: [
+    "This page shows what I'm currently working or learning on and the progress of each task, sync anytime.",
+  ],
 }
 
 export const SOCIALS: Social[] = [
