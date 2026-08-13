@@ -6,6 +6,7 @@ import BackToPrev from "@components/BackToPrev.astro"
 import FormattedDate from "@components/FormattedDate.astro"
 import { IconNow } from "@lib/iconSystem"
 import NowPlaying from "@components/NowPlaying.astro"
+import Link from "@components/Link.astro"
 import Mood from "@components/Mood.astro"
 import { gitDate } from "@lib/utils"
 
@@ -45,14 +46,19 @@ const lastUpdated = gitDate(`now/${latestEntry.id}`)
         </div>
       </div>
 
-      <article class="prose prose-neutral dark:prose-invert max-w-none">
-        <Content />
-      </article>
+      <p class="text-md opacity-60">
+        What's a /now page? Read more about it
+        <Link href="https://nownownow.com/about" external>here</Link>.
+      </p>
 
-      <div class="space-y-4 py-8">
+      <div class="space-y-4">
         <Mood />
         <NowPlaying />
       </div>
+
+      <article class="prose prose-neutral dark:prose-invert max-w-none">
+        <Content />
+      </article>
 
       {
         history.length > 0 && (
