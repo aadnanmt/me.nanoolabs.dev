@@ -1,0 +1,24 @@
+<!--
+NaN LOGOMARK
+Author: Adnan Slamet Wibowo
+Date: 2026-08-12
+URL: https://root.nanoolabs.dev
+Brand Identity: https://root.nanoolabs.dev/brand
+This vector graphic is the intellectual property of aadnanmt.
+Modifications are prohibited without explicit permission.  
+-->
+<svg xmlns="http://www.w3.org/2000/svg" id="svg1" width="1024" height="1024" viewBox="0 0 270.933 270.933">
+  <!-- Background Rect -->
+  <rect width="100%" height="100%" fill="#050505" />
+  
+  <!-- NaN [use monospace only because simple font] -->
+  <text 
+    x="50" 
+    y="250" 
+    font-family="monospace" 
+    font-weight="bold" 
+    font-size="120" 
+    fill="#0ff">
+    NaN
+  </text>
+</svg>
