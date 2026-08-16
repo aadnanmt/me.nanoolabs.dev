@@ -58,14 +58,9 @@ function formatTimeAgo(timestamp?: number) {
           : `Last Played - ${formatTimeAgo(track.timestamp)}`
       }
     </span>
-    <a
-      href={track.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      class="truncate text-sm font-semibold underline decoration-black/30 underline-offset-4 transition-colors hover:text-black dark:decoration-white/30 dark:hover:text-white"
-    >
+    <span class="truncate text-sm font-semibold text-black dark:text-white">
       {track.name}
-    </a>
+    </span>
     <span class="truncate text-xs opacity-60">{track.artist}</span>
   </div>
 </div>

@@ -1,7 +1,6 @@
 ---
 import { getMood } from "@lib/imood"
 import { getEmoji } from "@lib/emoji"
-import Link from "@components/Link.astro"
 
 const { mood, content, updated, error } = await getMood()
 
@@ -31,13 +30,9 @@ const updatedText = updated
     <span class="text-xs font-semibold tracking-widest uppercase opacity-50">
       Current mood{updatedText}
     </span>
-    <Link
-      href={`https://www.imood.com/finder?m=${encodeURIComponent(mood)}&search=do`}
-      external
-      class="truncate text-sm font-semibold text-black dark:text-white"
-    >
+    <span class="truncate text-sm font-semibold text-black dark:text-white">
       {mood}
-    </Link>
+    </span>
     {content && <span class="text-xs break-words opacity-60">{content}</span>}
   </div>
 </div>
