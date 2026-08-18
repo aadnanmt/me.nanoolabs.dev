@@ -22,6 +22,24 @@ if (isProd) {
 export default defineConfig({
   site: "https://root.nanoolabs.dev",
   integrations: [mdx(), sitemap()],
+  redirects: {
+    "/gh": { destination: "https://github.com/aadnanmt", status: 301 },
+    "/cb": { destination: "https://codeberg.org/aadnanmt", status: 301 },
+    "/tg": { destination: "https://t.me/nan_simple", status: 301 },
+    "/dc": {
+      destination: "https://discord.com/users/1155470881183760525",
+      status: 301,
+    },
+    "/ig": { destination: "https://www.instagram.com/aadnanmt", status: 301 },
+    "/x": { destination: "https://twitter.com/aadnanmt", status: 301 },
+    "/sp": {
+      destination: "https://open.spotify.com/user/314bjvthnpohaain54tchezpc4ji",
+      status: 301,
+    },
+    "/kf": { destination: "https://ko-fi.com/aadnanmt", status: 301 },
+    "/gl": { destination: "https://gitlab.com/users/aadnanmt", status: 301 },
+    "/th": { destination: "https://www.threads.com/@aadnanmt", status: 301 },
+  },
   markdown: {
     shikiConfig: {
       themes: {

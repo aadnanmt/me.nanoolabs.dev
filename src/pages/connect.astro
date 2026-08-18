@@ -56,32 +56,59 @@ import { getIcon, IconEmail } from "@lib/iconSystem"
 
           <ul class="grid grid-cols-1 gap-6 md:grid-cols-2">
             {
-              SOCIALS.map((SOCIAL) => (
-                <li class="group flex flex-col gap-1 border-l-2 border-zinc-200 pl-4 dark:border-zinc-800">
-                  <div class="flex items-center gap-2">
-                    <div class="size-4 fill-zinc-500 text-zinc-500">
-                      <Fragment set:html={getIcon(SOCIAL.NAME)} />
+              SOCIALS.map((SOCIAL) => {
+                const isKofi = SOCIAL.NAME === "ko-fi"
+                const isDiscord = SOCIAL.NAME === "discord"
+                const isSpotify = SOCIAL.NAME === "spotify"
+                const isExcluded = isKofi || isDiscord || isSpotify
+                const isInactive = !SOCIAL.ACTIVE && !isExcluded
+                return (
+                  <li
+                    class={`group flex flex-col gap-1 border-l-2 border-zinc-200 pl-4 dark:border-zinc-800${isInactive ? " pointer-events-none opacity-50" : ""}`}
+                  >
+                    <div class="flex items-center gap-2">
+                      <div class="size-4 fill-zinc-500 text-zinc-500">
+                        <Fragment set:html={getIcon(SOCIAL.NAME)} />
+                      </div>
+                      {SOCIAL.ACTIVE || isExcluded ? (
+                        <Link
+                          href={SOCIAL.HREF}
+                          external
+                          class="font-medium text-black lowercase dark:text-white"
+                        >
+                          {SOCIAL.NAME}
+                        </Link>
+                      ) : (
+                        <span class="font-medium text-black lowercase dark:text-white">
+                          {SOCIAL.NAME}
+                        </span>
+                      )}
+                      {SOCIAL.ACTIVE && (
+                        <span class="rounded-full bg-cyan-400/10 px-2 py-0.5 text-[10px] tracking-wider text-cyan-700 uppercase dark:text-cyan-400">
+                          active
+                        </span>
+                      )}
+                      {isInactive && (
+                        <span class="rounded-full bg-zinc-400/10 px-2 py-0.5 text-[10px] tracking-wider text-zinc-500 uppercase dark:text-zinc-500">
+                          inactive
+                        </span>
+                      )}
                     </div>
-                    <Link
-                      href={SOCIAL.HREF}
-                      external
-                      class="font-medium text-black capitalize dark:text-white"
-                    >
-                      {SOCIAL.NAME}
-                    </Link>
-                    {SOCIAL.ACTIVE && (
-                      <span class="rounded-full bg-cyan-400/10 px-2 py-0.5 text-[10px] tracking-wider text-cyan-700 uppercase dark:text-cyan-400">
-                        active
-                      </span>
-                    )}
-                  </div>
-                  <span class="text-xs text-zinc-500">
-                    {SOCIAL.DESCRIPTION}
-                  </span>
-                </li>
-              ))
+                    <span class="text-xs text-zinc-500">
+                      {SOCIAL.DESCRIPTION}
+                    </span>
+                  </li>
+                )
+              })
             }
           </ul>
+          <p class="text-xs text-zinc-500 dark:text-zinc-400">
+            I'm currently optimize for <strong>deep work.</strong> Only via <strong
+              >GitHub</strong
+            > / <strong>Codeberg</strong> for technical collab, or <strong
+              >Telegram</strong
+            > for direct message.
+          </p>
         </section>
 
         <section class="space-y-4">

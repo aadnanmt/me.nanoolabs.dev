@@ -107,46 +107,60 @@ export const FOCUS: Metadata = {
 }
 
 export const SOCIALS: Social[] = [
-  {
-    NAME: "x-twitter",
-    HREF: "https://twitter.com/aadnanmt",
-    DESCRIPTION: "Thoughts, updates, and tech rants.",
-  },
+  // Active
   {
     NAME: "github",
-    HREF: "https://github.com/aadnanmt",
+    HREF: "/gh",
     DESCRIPTION: "Where I store my code and experiments.",
     ACTIVE: true,
   },
   {
     NAME: "codeberg",
-    HREF: "https://codeberg.org/aadnanmt",
+    HREF: "/cb",
     DESCRIPTION: "Primary forge and backup for my code and projects.",
     ACTIVE: true,
   },
   {
     NAME: "telegram",
-    HREF: "https://t.me/adnanbuilds",
+    HREF: "/tg",
     DESCRIPTION: "Best for a direct and quick technical chat.",
+    ACTIVE: true,
   },
+  // Balanced (excluded from inactive)
   {
     NAME: "discord",
-    HREF: "https://discord.com/users/1155470881183760525",
+    HREF: "/dc",
     DESCRIPTION: "Direct chat, mostly for tech talk and gaming.",
   },
   {
-    NAME: "instagram",
-    HREF: "https://www.instagram.com/aadnanmt",
-    DESCRIPTION: "Personal bits and visual logs.",
-  },
-  {
     NAME: "spotify",
-    HREF: "https://open.spotify.com/user/314bjvthnpohaain54tchezpc4ji",
+    HREF: "/sp",
     DESCRIPTION: "My playlists and what I am listening to.",
   },
   {
     NAME: "ko-fi",
-    HREF: "https://ko-fi.com/aadnanmt",
+    HREF: "/kf",
     DESCRIPTION: "Support my work or buy me a cup of coffee.",
+  },
+  // Inactive
+  {
+    NAME: "x-twitter",
+    HREF: "/x",
+    DESCRIPTION: "Thoughts, updates, and tech rants.",
+  },
+  {
+    NAME: "instagram",
+    HREF: "/ig",
+    DESCRIPTION: "Personal bits and visual logs.",
+  },
+  {
+    NAME: "gitlab",
+    HREF: "https://gitlab.com/users/aadnanmt",
+    DESCRIPTION: "Another forge, less active.",
+  },
+  {
+    NAME: "threads",
+    HREF: "/th",
+    DESCRIPTION: "Short-form thoughts and updates.",
   },
 ]
