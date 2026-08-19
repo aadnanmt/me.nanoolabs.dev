@@ -39,6 +39,8 @@ export default defineConfig({
     "/kf": { destination: "https://ko-fi.com/aadnanmt", status: 301 },
     "/gl": { destination: "https://gitlab.com/users/aadnanmt", status: 301 },
     "/th": { destination: "https://www.threads.com/@aadnanmt", status: 301 },
+    "/rss": { destination: "/rss.xml", status: 301 },
+    "/key": { destination: "/keys", status: 301 },
   },
   markdown: {
     shikiConfig: {
