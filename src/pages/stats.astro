@@ -13,13 +13,14 @@ import { STATS } from "@consts"
 const allBlog = await getCollection("blog", ({ data }) => !data.draft)
 const allCommands = await getCollection("commands")
 const allProjects = await getCollection("projects", ({ data }) => !data.draft)
-const allMilestones = await getCollection("milestones")
+// Milestones: disabled from digital garden (see TODO.md)
+// const allMilestones = await getCollection("milestones")
 
 const gardenStats = [
-  { name: "Blog Posts", count: allBlog.length, color: "text-cyan-500" },
-  { name: "Commands", count: allCommands.length, color: "text-cyan-500" },
-  { name: "Projects", count: allProjects.length, color: "text-cyan-500" },
-  { name: "Milestones", count: allMilestones.length, color: "text-cyan-500" },
+  { name: "Blog Posts", count: allBlog.length },
+  { name: "Commands", count: allCommands.length },
+  { name: "Projects", count: allProjects.length },
+  // { name: "Milestones", count: allMilestones.length },
 ]
 
 const STATS_URL =
@@ -38,6 +39,15 @@ const {
 } = stats
 
 const diskMB = Math.round(totalDiskUsage / 1024)
+
+const githubStats = [
+  { name: "Followers", value: totalFollowers },
+  { name: "Commit Streak", value: `${streak} days` },
+  { name: "All-time Commits", value: totalCommits },
+  { name: "Repositories", value: repoCount },
+  { name: "Disk Usage", value: `${diskMB} MB` },
+  { name: "Main License", value: mainLicense },
+]
 
 interface Language {
   name: string
@@ -76,7 +86,7 @@ interface Language {
                   <div class="text-[10px] tracking-wider uppercase opacity-50">
                     {stat.name}
                   </div>
-                  <div class={`font-mono text-2xl font-bold ${stat.color}`}>
+                  <div class="font-mono text-2xl font-bold text-cyan-500">
                     {stat.count}
                   </div>
                 </div>
@@ -93,47 +103,18 @@ interface Language {
             GitHub Activity
           </h2>
           <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
-            <div class="space-y-1">
-              <div class="text-sm tracking-wider opacity-50">Followers</div>
-              <div class="font-mono text-2xl font-bold text-cyan-500">
-                {totalFollowers}
-              </div>
-            </div>
-            <div class="space-y-1">
-              <div class="text-sm tracking-wider opacity-50">Commit Streak</div>
-              <div class="font-mono text-2xl font-bold text-cyan-500">
-                {streak} days
-              </div>
-            </div>
-            <div class="space-y-1">
-              <div class="text-sm tracking-wider opacity-50">
-                All-time Commits
-              </div>
-              <div class="font-mono text-2xl font-bold text-cyan-500">
-                {totalCommits}
-              </div>
-            </div>
-            <div class="space-y-1">
-              <div class="text-sm tracking-wider opacity-50">Repositories</div>
-              <div class="font-mono text-2xl font-bold text-cyan-500">
-                {repoCount}
-              </div>
-            </div>
-            <div class="space-y-1">
-              <div class="text-sm tracking-wider opacity-50">Disk Usage</div>
-              <div class="font-mono text-2xl font-bold text-cyan-500">
-                {diskMB} MB
-              </div>
-            </div>
-            <div class="space-y-1">
-              <div class="text-sm tracking-wider opacity-50">Main License</div>
-              <div class="font-mono text-2xl font-bold text-cyan-500">
-                {mainLicense}
-              </div>
-            </div>
-          </div>
-          <div class="text-sm italic opacity-50">
-            Last sync: {new Date(updatedAt).toLocaleDateString("en-GB")}
+            {
+              githubStats.map((stat) => (
+                <div class="space-y-1">
+                  <div class="text-sm tracking-wider opacity-50">
+                    {stat.name}
+                  </div>
+                  <div class="font-mono text-2xl font-bold text-cyan-500">
+                    {stat.value}
+                  </div>
+                </div>
+              ))
+            }
           </div>
         </section>
 
@@ -158,19 +139,19 @@ interface Language {
               ))
             }
           </div>
+          <div class="text-sm italic opacity-50">
+            Last sync: {new Date(updatedAt).toLocaleDateString("en-GB")} · Source:{
+              " "
+            }
+            <Link href="https://github.com/aadnanmt/readmeSync" external
+              >github.com/aadnanmt/readmeSync</Link
+            >
+          </div>
         </section>
       </div>
 
       <div class="pt-10">
         <NowPlaying />
-      </div>
-
-      <div
-        class="mt-12 border-t border-black/10 pt-8 text-sm italic opacity-50 dark:border-white/10"
-      >
-        Source: <Link href="https://github.com/aadnanmt/readmeSync" external
-          >github.com/aadnanmt/readmeSync</Link
-        >
       </div>
     </div>
   </Container>
