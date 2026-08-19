@@ -19,6 +19,7 @@ export type Social = {
   HREF: string
   DESCRIPTION: string
   ACTIVE?: boolean
+  BALANCED?: boolean
 }
 
 export type ExplorePage = {

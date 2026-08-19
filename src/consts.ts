@@ -126,21 +126,24 @@ export const SOCIALS: Social[] = [
     DESCRIPTION: "Best for a direct and quick technical chat.",
     ACTIVE: true,
   },
-  // Balanced (excluded from inactive)
+  // Balanced (used but not primary)
   {
     NAME: "discord",
     HREF: "/dc",
     DESCRIPTION: "Direct chat, mostly for tech talk and gaming.",
+    BALANCED: true,
   },
   {
     NAME: "spotify",
     HREF: "/sp",
     DESCRIPTION: "My playlists and what I am listening to.",
+    BALANCED: true,
   },
   {
     NAME: "ko-fi",
     HREF: "/kf",
     DESCRIPTION: "Support my work or buy me a cup of coffee.",
+    BALANCED: true,
   },
   // Inactive
   {

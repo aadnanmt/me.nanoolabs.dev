@@ -57,11 +57,8 @@ import { getIcon, IconEmail } from "@lib/iconSystem"
           <ul class="grid grid-cols-1 gap-6 md:grid-cols-2">
             {
               SOCIALS.map((SOCIAL) => {
-                const isKofi = SOCIAL.NAME === "ko-fi"
-                const isDiscord = SOCIAL.NAME === "discord"
-                const isSpotify = SOCIAL.NAME === "spotify"
-                const isExcluded = isKofi || isDiscord || isSpotify
-                const isInactive = !SOCIAL.ACTIVE && !isExcluded
+                const isExcluded = SOCIAL.BALANCED
+                const isInactive = !SOCIAL.ACTIVE && !SOCIAL.BALANCED
                 return (
                   <li
                     class={`group flex flex-col gap-1 border-l-2 border-zinc-200 pl-4 dark:border-zinc-800${isInactive ? " pointer-events-none opacity-50" : ""}`}
@@ -132,7 +129,7 @@ import { getIcon, IconEmail } from "@lib/iconSystem"
                   <Fragment set:html={getIcon("ko-fi")} />
                 </div>
                 <Link
-                  href="https://ko-fi.com/aadnanmt"
+                  href="/kf"
                   external
                   class="font-medium text-black dark:text-white"
                 >
