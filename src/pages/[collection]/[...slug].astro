@@ -14,10 +14,12 @@ type Entry =
   | CollectionEntry<"blog">
   | CollectionEntry<"projects">
   | CollectionEntry<"commands">
-  | CollectionEntry<"milestones">
+// Milestones: disabled from digital garden (see TODO.md)
+// | CollectionEntry<"milestones">
 
 export async function getStaticPaths() {
-  const COLLECTIONS = ["blog", "projects", "commands", "milestones"] as const
+  // Milestones: disabled from difital garden (see TODO.md)
+  const COLLECTIONS = ["blog", "projects", "commands"] as const
   const paths: {
     params: { collection: string; slug: string | undefined }
     props: { collection: string; entry: Entry }
@@ -72,8 +74,8 @@ const hasDate = collection !== "commands"
 const useProse = collection === "commands" || collection === "milestones"
 const bigTitle = collection === "commands" || collection === "milestones"
 const hasDemo = collection === "projects"
-const hasMood = collection === "milestones"
-const hasLesson = collection === "milestones"
+const hasMood = collection === "milestones" // Milestones: disabled (see TODO.md)
+const hasLesson = collection === "milestones" // Milestones: disabled (see TODO.md)
 const currentMoodColor =
   hasMood && entry.data.mood ? (moodColor[entry.data.mood] ?? "") : ""
 const currentMoodEmoji =

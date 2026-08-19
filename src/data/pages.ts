@@ -12,11 +12,6 @@ export const EXPLORE_PAGES: ExplorePage[] = [
     desc: "What I'm focusing on at this exact moment.",
   },
   {
-    name: "Milestones",
-    href: "/milestones",
-    desc: "Documenting lessons learned on my journey",
-  },
-  {
     name: "Uses",
     href: "/uses",
     desc: "The tools, software, and stack I use every day.",
