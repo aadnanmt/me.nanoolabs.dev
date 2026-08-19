@@ -24,13 +24,12 @@ const {
   description,
   image = `${SITE.CDN}/assets/identity/whoami.webp`,
 } = Astro.props
-const faviconUrl = "/favicon.svg"
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/svg+xml" href={faviconUrl} />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta name="generator" content={Astro.generator} />
 
 <!-- Font preloads -->
@@ -43,35 +42,23 @@ const faviconUrl = "/favicon.svg"
 <!-- Primary Meta Tags -->
 <title>{title}</title>
 
-<!-- Theme preference script (eliminate FOUC) -->
+<!-- Theme preference (pre-paint + SPA nav + system changes) -->
 <script is:inline>
-  try {
-    const theme = (() => {
-      if (
-        typeof localStorage !== "undefined" &&
-        localStorage.getItem("theme") === "dark"
-      )
-        return "dark"
-      if (
-        typeof localStorage !== "undefined" &&
-        localStorage.getItem("theme") === "light"
-      )
-        return "light"
-
-      // Fallback to system preference
-      if (window.matchMedia("(prefers-color-scheme: dark)").matches)
-        return "dark"
-      return "light" // default light mode
-    })()
-
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark")
-    } else {
-      document.documentElement.classList.remove("dark")
-    }
-  } catch (e) {
-    console.error("failed to apply theme preference from localStorage:", e)
+  function applyTheme() {
+    const stored = localStorage.getItem("theme")
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches
+    const dark = stored ? stored === "dark" : prefersDark
+    document.documentElement.classList.toggle("dark", dark)
   }
+  applyTheme()
+  document.addEventListener("astro:after-swap", applyTheme)
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", () => {
+      if (!localStorage.getItem("theme")) applyTheme()
+    })
 </script>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
@@ -113,7 +100,6 @@ const faviconUrl = "/favicon.svg"
 
 <script>
   function init() {
-    preloadTheme()
     onScroll()
 
     const backToTop = document.getElementById("back-to-top")
@@ -121,32 +107,6 @@ const faviconUrl = "/favicon.svg"
 
     const backToPrev = document.getElementById("back-to-prev")
     backToPrev?.addEventListener("click", () => window.history.back())
-
-    const lightThemeButton = document.getElementById("light-theme-button")
-    lightThemeButton?.addEventListener("click", () => {
-      localStorage.setItem("theme", "light")
-      toggleTheme(false)
-    })
-
-    const darkThemeButton = document.getElementById("dark-theme-button")
-    darkThemeButton?.addEventListener("click", () => {
-      localStorage.setItem("theme", "dark")
-      toggleTheme(true)
-    })
-
-    const systemThemeButton = document.getElementById("system-theme-button")
-    systemThemeButton?.addEventListener("click", () => {
-      localStorage.setItem("theme", "system")
-      toggleTheme(window.matchMedia("(prefers-color-scheme: dark)").matches)
-    })
-
-    window
-      .matchMedia("(prefers-color-scheme: dark)")
-      .addEventListener("change", (event) => {
-        if (localStorage.theme === "system" || !localStorage.theme) {
-          toggleTheme(event.matches)
-        }
-      })
 
     document.addEventListener("scroll", onScroll)
     initCopyButtons()
@@ -197,44 +157,6 @@ const faviconUrl = "/favicon.svg"
       top: 0,
       behavior: "smooth",
     })
-  }
-
-  function toggleTheme(dark: boolean) {
-    const css = document.createElement("style")
-
-    css.appendChild(
-      document.createTextNode(
-        `* {
-             -webkit-transition: none !important;
-             -moz-transition: none !important;
-             -o-transition: none !important;
-             -ms-transition: none !important;
-             transition: none !important;
-          }
-        `
-      )
-    )
-
-    document.head.appendChild(css)
-
-    if (dark) {
-      document.documentElement.classList.add("dark")
-    } else {
-      document.documentElement.classList.remove("dark")
-    }
-
-    window.getComputedStyle(css).opacity
-    document.head.removeChild(css)
-  }
-
-  function preloadTheme() {
-    const userTheme = localStorage.theme
-
-    if (userTheme === "light" || userTheme === "dark") {
-      toggleTheme(userTheme === "dark")
-    } else {
-      toggleTheme(window.matchMedia("(prefers-color-scheme: dark)").matches)
-    }
   }
 
   document.addEventListener("DOMContentLoaded", () => init())
