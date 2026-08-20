@@ -106,6 +106,14 @@ export const FOCUS: Metadata = {
   ],
 }
 
+export const NOTES: Metadata = {
+  TITLE: "Notes",
+  DESCRIPTION: "Raw thoughts and daily context, unpolished.",
+  INTRO: [
+    "Short, unpolish thoughts and context from my days. Not lessons, just random note.",
+  ],
+}
+
 export const SOCIALS: Social[] = [
   // Active
   {

@@ -26,6 +26,7 @@ export type ExplorePage = {
   name: string
   href: string
   desc: string
+  group: "content" | "live" | "identity"
 }
 
 export type LastFMTrack = {

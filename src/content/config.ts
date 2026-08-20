@@ -84,6 +84,16 @@ const uses = defineCollection({
   }),
 })
 
+const notes = defineCollection({
+  type: "content",
+  schema: z.object({
+    date: z.coerce.date(),
+    title: z.string().optional(),
+    mood: z.string().optional(),
+    draft: z.boolean().optional(),
+  }),
+})
+
 export const collections = {
   blog,
   work,
@@ -92,4 +102,5 @@ export const collections = {
   commands,
   milestones,
   uses,
+  notes,
 }
