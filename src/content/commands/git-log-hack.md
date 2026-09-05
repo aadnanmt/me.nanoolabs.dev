@@ -2,6 +2,7 @@
 title: "Git log hack"
 description: "Mastering git log visualization and custom format to track your history like a pro."
 category: "Git"
+tags: ["git", "log"]
 ---
 
 Sometimes you wonder "history commit git". Use this command to hack git log or history on the current directory.

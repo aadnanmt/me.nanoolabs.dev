@@ -4,6 +4,7 @@ description: "Droidcam: its uses and how to install it."
 date: "Apr 11 2026"
 lang: "en"
 translationKey: "droidcam-on-distro-linux"
+tags: ["linux", "webcam", "droidcam"]
 ---
 
 ## What is Droidcam?

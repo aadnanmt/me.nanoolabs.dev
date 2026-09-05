@@ -2,6 +2,7 @@
 title: "Git log search"
 description: "Search your commit history by message or by code change"
 category: "Git"
+tags: ["git", "log"]
 ---
 
 Two ways to search history commits, depend on what you remember.

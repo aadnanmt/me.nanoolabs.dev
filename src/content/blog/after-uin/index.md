@@ -1,8 +1,9 @@
 ---
 title: "Context Switch: UIN to School"
-description: "My journey return to the academic world after a internship experience."
+description: "My journey return to the academic world after an internship experience."
 date: "2026-06-13"
 draft: false
+tags: ["life", "context-switch"]
 ---
 
 After spending a few months in the professional world through an internship at UIN Malang. Yoo, I finally had to go back to school.
