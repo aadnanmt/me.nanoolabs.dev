@@ -9,6 +9,9 @@ const notes = (await getCollection("notes"))
   .filter((note) => !note.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
 
+// Group notes by date (YYYY-MM-DD). ||= initialize array on first
+// note for that day. Leading semicolon prevents ASI from treating
+// `(acc[key]...` as a function call on the previous expression
 const grouped = notes.reduce(
   (acc, note) => {
     const key = note.data.date.toISOString().slice(0, 10)

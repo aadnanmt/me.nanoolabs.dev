@@ -26,6 +26,9 @@ export async function getStaticPaths() {
   }[] = []
 
   for (const name of COLLECTIONS) {
+    // Draft filter: exclude entries where `draft` exists AND is true
+    // The `"draft" in e.data` guard lets collections without a draft
+    // field (e.g commands) pass through without TypeError
     const entries = (await getCollection(name)).filter(
       (e) => !("draft" in e.data && e.data.draft)
     )
@@ -59,6 +62,9 @@ const { collection, entry } = Astro.props as {
   }
 }
 
+// Milestones disabled from frontend (see TODO.md). These stay defined
+// (not deleted) so re-enabl milestones only requires uncommenting
+// COLLECTIONS + this block, not rewriting logic from scratch.
 const moodColor: Record<string, string> = {
   Good: "text-green-500",
   Neutral: "text-yellow-500",

@@ -57,6 +57,8 @@ import { getIcon, IconEmail } from "@lib/iconSystem"
           <ul class="grid grid-cols-1 gap-6 md:grid-cols-2">
             {
               SOCIALS.map((SOCIAL) => {
+                // Three states: ACTIVE = linked + badge, BALANCED = linked
+                // but exclude from active count, INACTIVE = not linked
                 const isExcluded = SOCIAL.BALANCED
                 const isInactive = !SOCIAL.ACTIVE && !SOCIAL.BALANCED
                 return (

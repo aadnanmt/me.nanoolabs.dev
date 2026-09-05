@@ -47,11 +47,17 @@ export async function getNowPlaying(): Promise<NowPlayingResponse> {
       name: trackData.name,
       artist: trackData.artist["#text"],
       url: trackData.url,
+      // Last.fm returns multiple image sizes. Pick "large" for
+      // consistent card sizing. Fallback to empty string,
+      // NowPlaying.astro checks `track.image` before rendering <img>.
       image:
         trackData.image.find(
           (img: Record<string, string>) => img.size === "large"
         )?.["#text"] || "",
-      nowPlaying: trackData["@attr"]?.nowplaying === "true",
+      nowPlaying:
+        // Last.fm sends `@attr.nowplaying` as string "true", not boolean
+        // Strict === prevents truthy coercion of "false" → true
+        trackData["@attr"]?.nowplaying === "true",
       timestamp: trackData.date ? parseInt(trackData.date.uts) : undefined,
     }
 

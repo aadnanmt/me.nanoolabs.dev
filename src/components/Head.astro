@@ -42,7 +42,8 @@ const {
 <!-- Primary Meta Tags -->
 <title>{title}</title>
 
-<!-- Theme preference (pre-paint + SPA nav + system changes) -->
+<!-- Theme: runs pre-paint (FOUC prevention), re-runs on ClientRouter SPA nav
+     (astro:after-swap), and follows system changes only when no stored pref -->
 <script is:inline>
   function applyTheme() {
     const stored = localStorage.getItem("theme")
