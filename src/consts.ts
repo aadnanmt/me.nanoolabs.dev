@@ -166,7 +166,7 @@ export const SOCIALS: Social[] = [
   },
   {
     NAME: "gitlab",
-    HREF: "https://gitlab.com/users/aadnanmt",
+    HREF: "/gl",
     DESCRIPTION: "Another forge, less active.",
   },
   {

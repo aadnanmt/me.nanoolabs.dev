@@ -3,6 +3,7 @@ import mdx from "@astrojs/mdx"
 import sitemap from "@astrojs/sitemap"
 import tailwindcss from "@tailwindcss/vite"
 import { execSync } from "child_process"
+import { SITE } from "./src/consts"
 
 // Cloudflare Pages set CF_PAGES=1 during production build
 // Local dev stay static (no adapter needed, faster iteration)
@@ -28,7 +29,7 @@ if (isProd) {
 }
 
 export default defineConfig({
-  site: "https://root.nanoolabs.dev",
+  site: SITE.URL,
   integrations: [mdx(), sitemap()],
   redirects: {
     "/gh": { destination: "https://github.com/aadnanmt", status: 301 },
