@@ -32,6 +32,12 @@ export const EXPLORE_PAGES: ExplorePage[] = [
     group: "live",
   },
   {
+    name: "Work",
+    href: "/work",
+    desc: "My professional experience and work history.",
+    group: "content",
+  },
+  {
     name: "Uses",
     href: "/uses",
     desc: "The tools, software, and stack I use every day.",
