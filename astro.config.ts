@@ -4,15 +4,23 @@ import sitemap from "@astrojs/sitemap"
 import tailwindcss from "@tailwindcss/vite"
 import { execSync } from "child_process"
 
+// Cloudflare Pages set CF_PAGES=1 during production build
+// Local dev stay static (no adapter needed, faster iteration)
 const isProd = process.env.CF_PAGES === "1"
 
+// Short git hash for footer version link
+// Fail silent on shallow
+// clone or missing git (e.g. CI without history)
 let gitHash = "unknown"
 try {
   gitHash = execSync("git rev-parse --short HEAD").toString().trim()
 } catch (e) {
-  console.warn(`Could not get git hash: ${e.message}`)
+  console.warn(`Could not get git hash: ${(e as Error).message}`)
 }
 
+// Dynamic import adapter
+// adapter only needed in production
+// Importing static in dev would fail if @astrojs/cloudflare isn't resolvable
 let adapter
 if (isProd) {
   const { default: cloudflare } = await import("@astrojs/cloudflare")
@@ -53,6 +61,9 @@ export default defineConfig({
   image: {
     service: passthroughImageService(),
   },
+
+  // CF Pages require SSR ("server"). Soo.. local dev uses "static" for
+  // fast build without adapter overhead
   output: isProd ? "server" : "static",
   adapter: adapter,
   vite: {
