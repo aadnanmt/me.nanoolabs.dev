@@ -3,9 +3,11 @@ import Container from "@components/Container.astro"
 import { SITE } from "@consts"
 import BackToTop from "@components/BackToTop.astro"
 import Link from "@components/Link.astro"
+import { lastCommitDate, timeAgo } from "@lib/utils"
 const currentYear = new Date().getFullYear()
 const gitHash = import.meta.env.GIT_HASH
 const repoUrl = SITE.REPO
+const lastActive = lastCommitDate()
 ---
 
 <footer>
@@ -34,6 +36,18 @@ const repoUrl = SITE.REPO
         {SITE.NAME}
         <span class="opacity-50">|</span>
         <span class="flex items-center gap-1 font-mono opacity-50">
+          {
+            lastActive && (
+              <span title={lastActive.toISOString()}>
+                active {timeAgo(lastActive)}
+              </span>
+            )
+          }
+          {
+            lastActive && gitHash && gitHash !== "unknown" && (
+              <span class="opacity-50">|</span>
+            )
+          }
           {
             gitHash && gitHash !== "unknown" && (
               <Link
