@@ -13,10 +13,12 @@ const isProd = process.env.CF_PAGES === "1"
 // Fail silent on shallow
 // clone or missing git (e.g. CI without history)
 let gitHash = "unknown"
+let lastActiveTimestamp = ""
 try {
   gitHash = execSync("git rev-parse --short HEAD").toString().trim()
+  lastActiveTimestamp = execSync("git log -1 --pretty=%ct").toString().trim()
 } catch (e) {
-  console.warn(`Could not get git hash: ${(e as Error).message}`)
+  console.warn(`Could not get git info: ${(e as Error).message}`)
 }
 
 // Dynamic import adapter
@@ -73,6 +75,8 @@ export default defineConfig({
       "import.meta.env.GIT_HASH": JSON.stringify(
         process.env.CF_PAGES_COMMIT_SHA?.substring(0, 7) || gitHash
       ),
+      "import.meta.env.LAST_ACTIVE_TIMESTAMP":
+        JSON.stringify(lastActiveTimestamp),
     },
   },
 })

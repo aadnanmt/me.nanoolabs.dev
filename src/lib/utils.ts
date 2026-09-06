@@ -20,8 +20,8 @@ export function gitDate(filePath: string) {
 
 export function lastCommitDate() {
   try {
-    const stdout = execSync(`git log -1 --pretty="format:%ct"`)
-    const timestamp = parseInt(stdout.toString().trim(), 10)
+    const ts = import.meta.env.LAST_ACTIVE_TIMESTAMP
+    const timestamp = parseInt(ts, 10)
     return timestamp ? new Date(timestamp * 1000) : null
   } catch {
     return null
